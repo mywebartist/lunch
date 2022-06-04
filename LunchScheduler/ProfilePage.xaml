@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LunchScheduler.ProfilePage" Title="Profile"   >
+
+    <ContentPage.Content>
+        <StackLayout Padding="20,20,20,0" Spacing="0" >
+            <Label Text="Name:" FontSize="12" TextColor="LightGray"   />
+            <Label Text="{Binding Name}" FontSize="16" FontAttributes="Bold"   />
+
+            <Label Text="Email:" FontSize="12" Margin="0,10,0,0" TextColor="LightGray"  />
+            <Label Text="{Binding Email}" FontSize="16" FontAttributes="Bold"  />
+
+            <Label Text="Organization:" FontSize="12" Margin="0,10,0,0" TextColor="LightGray"  />
+            <Label Text="{Binding Organization}" FontSize="16" FontAttributes="Bold"  />
+
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

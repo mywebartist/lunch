@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LunchScheduler.View.NavigationBarView"
+      Padding="20,0" HeightRequest="60"
+      RowDefinitions="Auto,*,Auto" >
+
+    <Image Source="sandwich" HeightRequest="30" WidthRequest="30" ></Image>
+    <Label  ></Label>
+
+    <ImageButton  ></ImageButton>
+       
+    
+    
+</Grid>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LunchScheduler.StaffItemsSelectionPage" Title="Items Selection" >
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <DatePicker HorizontalOptions="StartAndExpand"  Margin="20,0,20,0" Format="dddd, d MMM yyyy" x:Name="itemDatePicker" Date="{Binding SelectedDate}" >
+
+                </DatePicker>
+                <Image Source="calendar.png" HorizontalOptions="End"  VerticalOptions="CenterAndExpand" HeightRequest="30" WidthRequest="30" ></Image>
+            </StackLayout>
+           
+            <ListView 
+                x:Name="GroupedView"
+                ItemsSource="{Binding OrderSelectionData}" RowHeight="60"  SeparatorVisibility="Default" SeparatorColor="LightGray" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid ColumnDefinitions="*, Auto"  Padding="20,0"  >
+                                <StackLayout VerticalOptions="CenterAndExpand" >
+                                    <StackLayout Orientation="Horizontal"   >
+                                        <CheckBox IsChecked="{Binding isSelected}" ></CheckBox>
+
+                                        <Label VerticalOptions="CenterAndExpand" Grid.Column="0" Text="{Binding ItemName}" TextColor="Black" >
+                                        </Label>
+                                    </StackLayout>
+
+                                    <Label  Margin="40,0,0,0" Grid.Column="0" Text="{Binding Description}" TextColor="Red" >
+                                    </Label>
+                                    <Button Text="Save" ></Button>
+                                </StackLayout>
+
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
