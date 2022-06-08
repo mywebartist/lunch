@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LunchScheduler.PinPage" NavigationPage.HasBackButton="False" >
+    <ContentPage.Content>
+        <Grid Padding="50, 0" RowDefinitions="3*,7*"  >
+            <StackLayout Grid.Row="0" VerticalOptions="EndAndExpand" >
+                <Image Source="sandwich"
+                HorizontalOptions="CenterAndExpand"
+                   HeightRequest="75"
+                   WidthRequest="75" ></Image>
+
+                <Label Text="Lunch Scheduler" FontSize="Large" FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"  ></Label>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Margin="0,20,0,0" >
+                <Label Text="Pin"  ></Label>
+                <Entry Placeholder="Pin from your email"    Text="{Binding Pin}" Margin="0,10,0,0" ></Entry>
+
+                <Button Clicked="Button_Clicked" Margin="40,30,40,0"
+                BackgroundColor="CornflowerBlue" TextColor="White"  
+                    Text="Login"  x:Name="EmailButton" ></Button>
+
+
+            </StackLayout>
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

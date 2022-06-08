@@ -1,2 +1,2 @@
-AdbTarget=-s LGH81561bc6d51
+AdbTarget=-s emulator-5554
 AdbOptions=

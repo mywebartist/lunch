@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LunchScheduler.LoginPage" NavigationPage.HasNavigationBar="False" >
     <ContentPage.Content>
-        <Grid Padding="20, 0" RowDefinitions="3*,7*"  >
+        <Grid Padding="50, 0" RowDefinitions="3*,7*"  >
             <StackLayout Grid.Row="0" VerticalOptions="EndAndExpand" >
                 <Image Source="sandwich"
                 HorizontalOptions="CenterAndExpand"
@@ -14,18 +14,21 @@
                    HorizontalTextAlignment="Center"  ></Label>
             </StackLayout>
 
-            <StackLayout Grid.Row="1" Margin="0,50,0,0" >
+            <StackLayout Grid.Row="1" Margin="0,20,0,0" >
                 <Label Text="Email"  ></Label>
-                <Entry Placeholder="Enter your email" Text="{Binding Email}" ></Entry>
+                <Entry   Placeholder="You will get pin by email" TextChanged="Entry_TextChanged"  Text="{Binding Email}" Margin="0,10,0,0" ></Entry>
 
-                <Button Clicked="Button_Clicked" Margin="0,10,0,0"
-                BackgroundColor="DarkBlue" TextColor="White"
-                    Text="Email Login Link" ></Button>
+                <Button Clicked="Button_Clicked" Margin="40,30,40,0"
+                BackgroundColor="CornflowerBlue" TextColor="White"  
+                    Text="Email Login Pin" IsEnabled="False" x:Name="EmailButton" ></Button>
+
+
+                
             </StackLayout>
-            
-          
+ 
 
-            
+
+
         </Grid>
     </ContentPage.Content>
 </ContentPage>

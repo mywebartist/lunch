@@ -17,7 +17,7 @@
                         <ViewCell>
                             <Grid ColumnDefinitions="*, Auto"  Padding="20,0"  >
                                 <StackLayout VerticalOptions="CenterAndExpand" >
-                                    <Label Grid.Column="0" Text="{Binding ItemName}" TextColor="Black" >
+                                    <Label Grid.Column="0" Text="{Binding name}" TextColor="Black" >
                                     </Label>
 
                                     <Label  Grid.Column="0" Text="{Binding ScheduleTime}" TextColor="Red" >
@@ -32,7 +32,7 @@
 
             </ListView>
 
-
+            <Label Text="{Binding Message}" Grid.Row="1" FontSize="16" TextColor="Black" VerticalTextAlignment="Center"  HorizontalOptions="Center" > </Label>
 
 
 

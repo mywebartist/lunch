@@ -57,7 +57,7 @@ namespace LunchScheduler.Service
 
             try
             {
-                Uri uri = new Uri(ConfigService.loginUrl + "?organization_id=" + organization_id);
+                Uri uri = new Uri(ConfigService.itemsUrl + "?organization_id=" + organization_id);
   
                 var result = await _client.GetAsync(uri);
 
@@ -83,6 +83,47 @@ namespace LunchScheduler.Service
             return null;
 
         }
+
+        public async Task<PinResponseModel> getAccessToken(string pinCode)
+        {
+
+            try
+            {
+                Uri uri = new Uri(ConfigService.accessCodeUrl);
+
+                JObject jObj = new JObject();
+                jObj.Add("pin", pinCode);
+
+                var payload = new StringContent(jObj.ToString(), Encoding.UTF8, "application/json");
+                var result = await _client.PostAsync(uri, payload);
+
+                if (result != null && result.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    string responseStr = await result.Content.ReadAsStringAsync();
+                    Debug.WriteLine("response: " + responseStr);
+                    //Console.WriteLine(responseStr);
+                    var responseObj = await Task.Run(() =>
+                    {
+                        return JsonConvert.DeserializeObject<PinResponseModel>(responseStr);
+                    });
+                    return responseObj;
+
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("response_error: " + e.Message);
+
+            }
+
+            return null;
+
+        }
+
+
+
+
+
 
     }
 }

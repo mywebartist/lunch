@@ -1,4 +1,5 @@
-﻿using LunchScheduler.Model;
+﻿using LunchScheduler.Helpers;
+using LunchScheduler.Model;
 using LunchScheduler.Service;
 using LunchScheduler.Service.ResponseModel;
 using System;
@@ -32,7 +33,21 @@ namespace LunchScheduler.ViewModel
             //});
 
             OrderData = new ObservableCollection<ItemModel>();
-             getItems();
+
+
+            // no organizatin
+            if (Settings.OrganizationIds.Count < 1)
+            {
+                Message = "you dont have any organization. join or make new one.";
+
+            }
+            else
+            {
+                 getItems();
+            }
+
+
+           
 
         }
 
@@ -48,12 +63,28 @@ namespace LunchScheduler.ViewModel
             }
         }
 
+        string message;
+        public string Message
+        {
+            get { return message; }
+            set
+            {
+                message = value;
+                OnPropertyChanged();
+            }
+        }
+
+
         public async void getItems()
         {
             try
             {
                 var web = new AccountService();
-                var result = await web.getItemsApi(2);
+
+
+               
+
+                var result = await web.getItemsApi(Settings.OrganizationIds.First());
                 if (result != null)
                 {
 
