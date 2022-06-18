@@ -15,6 +15,30 @@
             <Label Text="{Binding Organization}" FontSize="16" FontAttributes="Bold"  />
 
             
+            
+
+            <ListView 
+                x:Name="GroupedView"
+                        SelectionMode="None"
+                ItemsSource="{Binding OrgsListData}" RowHeight="60"  SeparatorVisibility="Default" SeparatorColor="LightGray" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid ColumnDefinitions="*, Auto"  Padding="20,0"  >
+
+                                <Label Padding="0,0,0,0" Grid.Column="0" Text="{Binding organization_with_id}" VerticalTextAlignment="Center" TextColor="Black" >
+                                </Label>
+                                <Button Clicked="ActivateButton_Clicked" BackgroundColor="{Binding activate_color}"  Grid.Column="1" ClassId="{Binding id}"  Text="Activate"></Button>
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+            
+
+
 
         </StackLayout>
     </ContentPage.Content>

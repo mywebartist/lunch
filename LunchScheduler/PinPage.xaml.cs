@@ -25,7 +25,7 @@ namespace LunchScheduler
             InitializeComponent();
             BindingContext = viewModel = new PinViewModel();
 
-            viewModel.Pin = "2J53";
+            viewModel.Pin = "C48K";
 
         }
 
@@ -57,7 +57,15 @@ namespace LunchScheduler
                     Settings.APIKey = result.XApikey;
                     Debug.WriteLine("response token: " + result.XApikey);
 
-                    Settings.OrganizationIds = result.organization_id;
+                   // Settings.OrganizationIds = result.organization_ids;
+                    Settings.ActiveOrganizationId = result.user.default_org.ToString();
+
+                    if (Settings.ActiveOrganizationId == "0")
+                    {
+                        Settings.ActiveOrganizationName = "";
+                    }
+                  
+
 
 
                     // login ok

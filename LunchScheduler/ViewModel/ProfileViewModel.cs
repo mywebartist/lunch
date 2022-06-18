@@ -1,5 +1,9 @@
-﻿using System;
+﻿using LunchScheduler.Model;
+using LunchScheduler.Service;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -11,10 +15,22 @@ namespace LunchScheduler.ViewModel
     {
         public ProfileViewModel()
         {
-            Name = "user#s name";
-            Email = "user#s email";
-            Organization = "user#s org";
+           
 
+            getUserProfile();
+            
+
+        }
+
+        ObservableCollection<OrganizationModel> _orgsList;
+        public ObservableCollection<OrganizationModel> OrgsListData
+        {
+            get { return _orgsList; }
+            set
+            {
+                _orgsList = value;
+                OnPropertyChanged();
+            }
 
         }
 
@@ -49,10 +65,48 @@ namespace LunchScheduler.ViewModel
                 organization = value;
                 OnPropertyChanged();
             }
+
+            
+    }
+
+
+
+        private async void getUserProfile()
+        {
+ 
+
+            var web = new AccountService();
+            var result = await web.getUserProfileApi();
+
+            Debug.WriteLine("response: " + result);
+
+            if (result != null)
+            {
+
+                Name = result.name;
+                Email = result.email;
+
+
+                if (result.orgs != null) {
+                    OrgsListData = new ObservableCollection<OrganizationModel>(result.orgs);
+                }
+             
+
+                //Email = "user#s email";
+                //Organization = "user#s org";
+            }
+            else
+            {
+                // api is down
+               App.Current.MainPage.DisplayAlert("alert", "backend system not working", "ok");
+            }
+
+
+
         }
 
 
-
+     
 
 
     }

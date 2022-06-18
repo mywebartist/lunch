@@ -13,10 +13,14 @@ namespace LunchScheduler.Service.ResponseModel
         public string description { get; set; }
         public DateTime created_at { get; set; }
         public DateTime updated_at { get; set; }
+
+        public string scheduled_at { get; set; }
     }
 
     public class ItemsResponseModel
     {
+        public int status_code { get; set; }
+        public string message { get; set; }
         public int current_page { get; set; }
         public List<ItemModel> data { get; set; }
         public string first_page_url { get; set; }

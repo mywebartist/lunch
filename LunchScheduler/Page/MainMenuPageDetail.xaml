@@ -8,22 +8,26 @@
     <ContentPage.Content  >
         <Grid RowDefinitions="Auto,*" >
 
-            
-            <ListView Grid.Row="1"
+            <ListView  Grid.Row="1"
                 x:Name="GroupedView"
+                   GroupDisplayBinding="{Binding Key}"
+                   IsGroupingEnabled="true"
+                        SelectionMode="None"
                 ItemsSource="{Binding OrderData}" RowHeight="60"  SeparatorVisibility="Default" SeparatorColor="LightGray" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <Grid ColumnDefinitions="*, Auto"  Padding="20,0"  >
                                 <StackLayout VerticalOptions="CenterAndExpand" >
-                                    <Label Grid.Column="0" Text="{Binding name}" TextColor="Black" >
+                                    <Label Grid.Column="0" Text="{Binding name}" TextColor="LightGray" >
                                     </Label>
 
-                                    <Label  Grid.Column="0" Text="{Binding ScheduleTime}" TextColor="Red" >
+                                    <Label  Grid.Column="0" Text="{Binding description}" TextColor="White" >
                                     </Label>
                                 </StackLayout>
 
+                                <Label Padding="0,10,0,0" Grid.Column="1" Text="{Binding ScheduleTime}" TextColor="White" >
+                                </Label>
 
                             </Grid>
                         </ViewCell>
@@ -31,7 +35,8 @@
                 </ListView.ItemTemplate>
 
             </ListView>
-
+            
+           
             <Label Text="{Binding Message}" Grid.Row="1" FontSize="16" TextColor="Black" VerticalTextAlignment="Center"  HorizontalOptions="Center" > </Label>
 
 

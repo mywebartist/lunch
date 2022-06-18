@@ -11,9 +11,23 @@ namespace LunchScheduler.Helpers
     {
 
         const string UserDetailsKey = "key_UserDetails";
+        
         const string TokenKey = "key_token";
-        const string OrganizationIdListKey = "key_OrganizationIdListKey";
         static readonly string TokenKeyDefault = string.Empty;
+
+        const string OrganizationIdListKey = "key_OrganizationIdListKey"; // org list
+
+        const string ActiveOrganizationIdKey = "key_ActiveOrganizationId";
+        static readonly string ActiveOrganizationIdKeyDefault = string.Empty;
+
+        const string ActiveOrganizationNameKey = "key_ActiveOrganizationName";
+        static readonly string ActiveOrganizationNameKeyDefault = string.Empty;
+
+        
+        
+
+       
+
 
         public static User CurrentUser
         {
@@ -35,31 +49,50 @@ namespace LunchScheduler.Helpers
             set => Preferences.Set(TokenKey, value);
         }
 
-        public static List<int> OrganizationIds
+
+        public static void LogOut()
         {
-            get
-            {
-                var str = Preferences.Get(OrganizationIdListKey, null);
-                if (!string.IsNullOrEmpty(str))
-                {
-                    // return str.Deserialize<List<int>>();
-                    return JsonConvert.DeserializeObject<List<int>>(str);
-                }
-                return new  List<int>() ;
-            }
-            set
-            {
-                Preferences.Set(OrganizationIdListKey, JsonConvert.SerializeObject(value));
-            }
+            APIKey = null;
+            Preferences.Remove(APIKey);
         }
 
+        public static string ActiveOrganizationId
+        {
+            get => Preferences.Get(ActiveOrganizationIdKey, ActiveOrganizationIdKeyDefault);
+            set => Preferences.Set(ActiveOrganizationIdKey, value);
+        }
+
+        public static string ActiveOrganizationName
+        {
+            get => Preferences.Get(ActiveOrganizationNameKey, ActiveOrganizationNameKeyDefault);
+            set => Preferences.Set(ActiveOrganizationNameKey, value);
+        }
+
+       // public static List<int> OrganizationIds
+      //  {
+       //     get
+       //    {
+        //        var str = Preferences.Get(OrganizationIdListKey, null);
+         //       if (!string.IsNullOrEmpty(str))
+        //        {
+                    // return str.Deserialize<List<int>>();
+         //           return JsonConvert.DeserializeObject<List<int>>(str);
+         //       }
+             //   return new  List<int>() ;
+         //   }
+        //    set
+       //     {
+        //        Preferences.Set(OrganizationIdListKey, JsonConvert.SerializeObject(value));
+       //     }
+      //  }
 
 
+       
 
     }
 
 
-    }
+}
 
 
  

@@ -32,11 +32,11 @@ namespace LunchScheduler.ViewModel
 
             //});
 
-            OrderData = new ObservableCollection<ItemModel>();
+            OrderData = new ObservableCollection<IGrouping<string, ItemModel>>();
 
 
             // no organizatin
-            if (Settings.OrganizationIds.Count < 1)
+            if (Settings.ActiveOrganizationId ==  "0")
             {
                 Message = "you dont have any organization. join or make new one.";
 
@@ -52,8 +52,9 @@ namespace LunchScheduler.ViewModel
         }
 
 
-        ObservableCollection<ItemModel> _orderData;
-        public ObservableCollection<ItemModel> OrderData
+        //ObservableCollection<ItemModel> _orderData;
+        ObservableCollection<IGrouping<string, ItemModel>> _orderData;
+        public ObservableCollection<IGrouping<string, ItemModel>> OrderData
         {
             get { return _orderData; }
             set
@@ -82,18 +83,20 @@ namespace LunchScheduler.ViewModel
                 var web = new AccountService();
 
 
-               
-
-                var result = await web.getItemsApi(Settings.OrganizationIds.First());
-                if (result != null)
+                var result = await web.getUserSelectedItemsApi( Convert.ToInt16(  Settings.ActiveOrganizationId ) );
+                if (result != null && result.data != null && result.data.Count > 0   )
                 {
 
-                    OrderData = new ObservableCollection<ItemModel>(result.data);
+                    var groupList = result.data.GroupBy(x => x.scheduled_at).ToList();
+                    OrderData = new ObservableCollection<IGrouping<string, ItemModel>>(groupList);
+
+                   
 
 
                 }
                 else
                 {
+                    Message = (OrderData != null && OrderData.Count > 0) ? "" : "you dont have item selection in this org";
                     // api is down
                     DisplayAlert("alert", "system not working", "ok");
                 }

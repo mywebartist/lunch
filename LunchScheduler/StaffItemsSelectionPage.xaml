@@ -22,11 +22,11 @@
                                     <StackLayout Orientation="Horizontal"   >
                                         <CheckBox IsChecked="{Binding isSelected}" ></CheckBox>
 
-                                        <Label VerticalOptions="CenterAndExpand" Grid.Column="0" Text="{Binding ItemName}" TextColor="Black" >
+                                        <Label VerticalOptions="CenterAndExpand" Grid.Column="0" Text="{Binding name}" TextColor="Black" >
                                         </Label>
                                     </StackLayout>
 
-                                    <Label  Margin="40,0,0,0" Grid.Column="0" Text="{Binding Description}" TextColor="Red" >
+                                    <Label  Margin="40,0,0,0" Grid.Column="0" Text="{Binding description}" TextColor="Red" >
                                     </Label>
                                     <Button Text="Save" ></Button>
                                 </StackLayout>

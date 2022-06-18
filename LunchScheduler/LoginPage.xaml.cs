@@ -25,8 +25,16 @@ namespace LunchScheduler
             BindingContext = viewModel = new LoginViewModel();
 
 
+
+
             // email input listener
             viewModel.Email = "abc@hot.com";
+
+           
+             
+
+            // check if login token is already saved
+            // DisplayAlert("alert", "ddd", "ok");
 
         }
 
@@ -47,12 +55,13 @@ namespace LunchScheduler
         private async void Button_Clicked(object sender, EventArgs e)
         {
 
-           // if ( string.IsNullOrEmpty( viewModel.Email ) )
-          //  {
-           //     DisplayAlert("alert", "enter email", "ok");
-           //     return;
-          //  }
+            // if ( string.IsNullOrEmpty( viewModel.Email ) )
+            //  {
+            //     DisplayAlert("alert", "enter email", "ok");
+            //     return;
+            //  }
 
+            
 
 
             var web = new AccountService();

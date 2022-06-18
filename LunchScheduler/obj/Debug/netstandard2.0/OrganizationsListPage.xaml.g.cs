@@ -8,20 +8,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("LunchScheduler.ProfilePage.xaml", "ProfilePage.xaml", typeof(global::LunchScheduler.ProfilePage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("LunchScheduler.OrganizationsListPage.xaml", "OrganizationsListPage.xaml", typeof(global::LunchScheduler.OrganizationsListPage))]
 
 namespace LunchScheduler {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("ProfilePage.xaml")]
-    public partial class ProfilePage : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("OrganizationsListPage.xaml")]
+    public partial class OrganizationsListPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.ListView GroupedView;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ProfilePage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(OrganizationsListPage));
             GroupedView = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "GroupedView");
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LunchScheduler.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -17,12 +18,24 @@ namespace LunchScheduler.Page
     {
         public ListView ListView;
 
+
         public MainMenuPageFlyout()
         {
             InitializeComponent();
 
             BindingContext = new MainMenuPageFlyoutViewModel();
             ListView = MenuItemsListView;
+
+      
+                OrganizationName.Text = Settings.ActiveOrganizationName;
+          
+           
+
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
         }
 
         private class MainMenuPageFlyoutViewModel : INotifyPropertyChanged
@@ -33,12 +46,17 @@ namespace LunchScheduler.Page
             {
                 MenuItems = new ObservableCollection<MainMenuPageFlyoutMenuItem>(new[]
                 {
-                    new MainMenuPageFlyoutMenuItem { Id = 0, Title = "Home", TargetType=typeof(MainMenuPageDetail) },
-                    new MainMenuPageFlyoutMenuItem { Id = 0, Title = "Profile(user)", TargetType=typeof(ProfilePage) },
-                    new MainMenuPageFlyoutMenuItem { Id = 1, Title = "Item Selection(staff)", TargetType=typeof(StaffItemsSelectionPage) },
-                    new MainMenuPageFlyoutMenuItem { Id = 2, Title = "Manage Items(chef)", TargetType=typeof(ChefItemsManagePage) },
-                    new MainMenuPageFlyoutMenuItem { Id = 3, Title = "View Orders(chef)", TargetType=typeof(ChefViewOrdersPage) },
+                    new MainMenuPageFlyoutMenuItem { Id = 0, Title = "Home"  },
+                    new MainMenuPageFlyoutMenuItem { Id = 1, Title = "Profile(user)" },
+                    new MainMenuPageFlyoutMenuItem { Id = 2, Title = "Item Selection(staff)" },
+                    new MainMenuPageFlyoutMenuItem { Id = 3, Title = "Manage Items(chef)" },
+                    new MainMenuPageFlyoutMenuItem { Id = 4, Title = "View Orders(chef)" },
+                    new MainMenuPageFlyoutMenuItem { Id = 5, Title = "Orgs list(anyone)" },
+                    new MainMenuPageFlyoutMenuItem { Id = 6, Title = "Logout(anyone)" },
                 });
+
+
+
             }
 
             #region INotifyPropertyChanged Implementation
