@@ -1,31 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
-
-namespace LunchScheduler.ViewModel
+﻿namespace LunchScheduler.ViewModel
 {
     public class LoginViewModel : BaseViewModel
     {
-        public LoginViewModel()
-        {
-           
-
-        }
-
         string email;
-        public string Email { 
+        public string Email
+        {
             get { return email; }
-            set {
+            set
+            {
                 email = value;
-              OnPropertyChanged();
+                OnPropertyChanged();
             }
         }
-        
-
-
-
     }
 }

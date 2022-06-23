@@ -1,24 +1,21 @@
-﻿using System;
+﻿using LunchScheduler.Model;
+using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace LunchScheduler.Service.ResponseModel
 {
-
     public class OrderListResponseModel
     {
         public int status_code { get; set; }
         public string message { get; set; }
         public List<OrderItemsModel> orders { get; set; }
     }
-
     public class ChefOrderResponseModel
     {
         public int status_code { get; set; }
         public string message { get; set; }
         public List<ItemModel> orders { get; set; }
     }
-
     public class OrderItemsModel
     {
         public int id { get; set; }
@@ -33,6 +30,4 @@ namespace LunchScheduler.Service.ResponseModel
         public User user { get; set; }
         public List<ItemModel> items { get; set; }
     }
-
-
 }

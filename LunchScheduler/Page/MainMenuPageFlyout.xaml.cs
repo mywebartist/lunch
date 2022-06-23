@@ -1,12 +1,7 @@
 ﻿using LunchScheduler.Helpers;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -26,10 +21,10 @@ namespace LunchScheduler.Page
             BindingContext = new MainMenuPageFlyoutViewModel();
             ListView = MenuItemsListView;
 
-      
-                OrganizationName.Text = Settings.ActiveOrganizationName;
-          
-           
+            OrganizationName.Text = Settings.ActiveOrganizationName;
+
+            UserEmail.Text = Settings.UserEmail;
+
 
         }
 
@@ -52,7 +47,8 @@ namespace LunchScheduler.Page
                     new MainMenuPageFlyoutMenuItem { Id = 3, Title = "Manage Items(chef)" },
                     new MainMenuPageFlyoutMenuItem { Id = 4, Title = "View Orders(chef)" },
                     new MainMenuPageFlyoutMenuItem { Id = 5, Title = "Orgs list(anyone)" },
-                    new MainMenuPageFlyoutMenuItem { Id = 6, Title = "Logout(anyone)" },
+                    new MainMenuPageFlyoutMenuItem { Id = 6, Title = "Orgs Items(anyone)" },
+                    new MainMenuPageFlyoutMenuItem { Id = 7, Title = "Logout(anyone)" },
                 });
 
 

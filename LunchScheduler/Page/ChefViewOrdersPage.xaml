@@ -21,8 +21,7 @@
                                     </Label>
                                 </StackLayout>
 
-                         
-
+                        
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

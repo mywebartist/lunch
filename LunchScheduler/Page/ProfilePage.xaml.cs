@@ -4,11 +4,7 @@ using LunchScheduler.Page;
 using LunchScheduler.Service;
 using LunchScheduler.ViewModel;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -19,13 +15,13 @@ namespace LunchScheduler
     public partial class ProfilePage : ContentPage
     {
         Page.MainMenuPage _mainmenupage;
-        public ProfilePage( Page.MainMenuPageFlyout flyoutPage, Page.MainMenuPage mainMenuPage)
+        public ProfilePage(Page.MainMenuPageFlyout flyoutPage, Page.MainMenuPage mainMenuPage)
         {
             InitializeComponent();
             BindingContext = new ProfileViewModel();
 
             _flyoutPage = flyoutPage;
-             _mainmenupage = mainMenuPage;
+            _mainmenupage = mainMenuPage;
         }
 
 
@@ -38,10 +34,9 @@ namespace LunchScheduler
 
             Settings.ActiveOrganizationId = organization.id.ToString();
 
-            
             Settings.ActiveOrganizationName = organization.organization_with_id;
 
-            _flyoutPage.OrganizationName.Text = organization.organization_with_id ;
+            _flyoutPage.OrganizationName.Text = organization.organization_with_id;
 
 
             updateUserProfile(organization.id);
@@ -50,7 +45,7 @@ namespace LunchScheduler
 
         }
 
-        public async void  updateUserProfile(int organization_id)
+        public async void updateUserProfile(int organization_id)
         {
 
 

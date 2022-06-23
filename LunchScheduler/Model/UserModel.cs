@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace LunchScheduler.Model
 {
     public class UserModel
     {
-
         public int status_code { get; set; }
         public string message { get; set; }
         public int id { get; set; }
         public string name { get; set; }
-        
+
         public string email { get; set; }
         public string role { get; set; }
         public int status { get; set; }
@@ -21,8 +19,4 @@ namespace LunchScheduler.Model
         public List<OrganizationModel> orgs { get; set; }
 
     }
-
-
-     
-
 }

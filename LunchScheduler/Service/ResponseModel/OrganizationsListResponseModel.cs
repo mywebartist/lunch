@@ -1,14 +1,8 @@
 ﻿using LunchScheduler.Model;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
 
 namespace LunchScheduler.Service.ResponseModel
-{
- 
+{ 
     public class OrganizationsListResponseModel
     {
         public int status_code { get; set; }
@@ -23,9 +17,4 @@ namespace LunchScheduler.Service.ResponseModel
         public object prev_page_url { get; set; }
         public int to { get; set; }
     }
-
-
-
-
-
 }

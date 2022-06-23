@@ -1,21 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-
-using Xamarin.Forms;
 
 namespace LunchScheduler.ViewModel
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public BaseViewModel()
-        {
-           
-        }
-
         protected bool SetProperty<T>(ref T backingStore, T value,
             [CallerMemberName] string propertyName = "",
             Action onChanged = null)
@@ -39,7 +30,5 @@ namespace LunchScheduler.ViewModel
 
             changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
-
     }
 }

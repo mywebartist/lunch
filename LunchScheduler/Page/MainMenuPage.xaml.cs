@@ -1,10 +1,4 @@
 ﻿using LunchScheduler.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -29,19 +23,16 @@ namespace LunchScheduler.Page
             var item = e.SelectedItem as MainMenuPageFlyoutMenuItem;
             if (item == null)
                 return;
-
-
-            //var page = (Xamarin.Forms.Page)Activator.CreateInstance(item.TargetType);
             Xamarin.Forms.Page page = null;
-            
+
 
             if (item.Id == 0)
             {
                 page = new MainMenuPageDetail();
             }
-           else if (  item.Id == 1 )
+            else if (item.Id == 1)
             {
-           
+
                 page = new ProfilePage(FlyoutPage, this);
             }
             else if (item.Id == 2)
@@ -67,9 +58,13 @@ namespace LunchScheduler.Page
             else if (item.Id == 6)
             {
 
+                page = new OrganizationItemsPage();
+            }
+            else if (item.Id == 7)
+            {
+
                 page = new LoginPage();
             }
-
 
             page.Title = item.Title;
             Detail = new NavigationPage(page);
@@ -81,15 +76,13 @@ namespace LunchScheduler.Page
                 Settings.LogOut();
 
             }
-
-
         }
 
         public void gotoPage(Xamarin.Forms.Page page)
         {
             Detail = new NavigationPage(page);
         }
-       
+
 
 
     }

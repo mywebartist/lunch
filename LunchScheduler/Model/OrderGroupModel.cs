@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
+﻿using System.Collections.Generic;
 
 namespace LunchScheduler.Model
 {
     public class OrderGroupModel : List<OrderModel>
     {
-
         public OrderGroupModel(string title, string shortName)
         {
             Title = title;
@@ -20,8 +14,6 @@ namespace LunchScheduler.Model
         public string ShortName { get; set; } //will be used for jump lists
 
         public static IList<OrderGroupModel> All { private set; get; }
-
-
 
 
     }

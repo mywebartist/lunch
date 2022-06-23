@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LunchScheduler.Service.ResponseModel
 {
@@ -11,12 +9,8 @@ namespace LunchScheduler.Service.ResponseModel
         public string message { get; set; }
 
     }
-
-
-
     public class User
     {
-
         public int id { get; set; }
         public string name { get; set; }
         public string role { get; set; }
@@ -24,8 +18,4 @@ namespace LunchScheduler.Service.ResponseModel
         public DateTime created_at { get; set; }
         public DateTime updated_at { get; set; }
     }
-
-
-
-
 }

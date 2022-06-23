@@ -1,20 +1,19 @@
 ﻿using LunchScheduler.Service;
 using LunchScheduler.ViewModel;
 using System;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace LunchScheduler
+namespace LunchScheduler.Page
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class OrganizationsListPage : ContentPage
+    public partial class OrganizationItemsPage : ContentPage
     {
-        OrganizationsListViewModel viewModel;
-        public OrganizationsListPage()
+        OrganizationItemsViewModel viewModel;
+        public OrganizationItemsPage()
         {
             InitializeComponent();
-            BindingContext = viewModel = new OrganizationsListViewModel();
+            BindingContext = viewModel = new OrganizationItemsViewModel();
         }
 
         private async void Button_ClickedAsync(object sender, EventArgs e)

@@ -1,16 +1,13 @@
 ﻿using LunchScheduler.Helpers;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
 
 
 namespace LunchScheduler.Service
 {
     public class BaseService
     {
-
         HttpClient client;
         public HttpClient _client
         {
@@ -31,13 +28,5 @@ namespace LunchScheduler.Service
                 client = value;
             }
         }
-
-       
-
-
     }
-
-  
-
-
 }

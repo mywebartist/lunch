@@ -1,13 +1,8 @@
 ﻿using LunchScheduler.Helpers;
-using LunchScheduler.Page;
 using LunchScheduler.Service;
 using LunchScheduler.ViewModel;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -24,22 +19,13 @@ namespace LunchScheduler
             InitializeComponent();
             BindingContext = viewModel = new LoginViewModel();
 
-
-
-
             // email input listener
             viewModel.Email = "abc@hot.com";
-
-           
-             
-
-            // check if login token is already saved
-            // DisplayAlert("alert", "ddd", "ok");
 
         }
 
 
-        public  bool IsValidEmail(string email)
+        public bool IsValidEmail(string email)
         {
             var pattern = @"^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$";
 
@@ -61,18 +47,18 @@ namespace LunchScheduler
             //     return;
             //  }
 
-            
+
 
 
             var web = new AccountService();
             var result = await web.LoginApi(viewModel.Email);
-            if(result != null)
+            if (result != null)
             {
-              
+
 
                 if (result.status_code == 0)
                 {
-                    DisplayAlert("alert", result.message,"ok");
+                    await DisplayAlert("alert", result.message, "ok");
                 }
                 else
                 {
@@ -80,23 +66,23 @@ namespace LunchScheduler
                     Settings.CurrentUser = result.user;
 
                     // login ok
-                    App.Current.MainPage.Navigation.PushAsync(new  PinPage() );
+                    App.Current.MainPage.Navigation.PushAsync(new PinPage());
                 }
 
             }
             else
             {
                 // api is down
-                DisplayAlert("alert", "backend system not working", "ok");
+                await DisplayAlert("alert", "backend system not working", "ok");
             }
 
-            
+
 
         }
 
         private void Entry_TextChanged(object sender, TextChangedEventArgs e)
         {
-           var validEmail =  IsValidEmail( viewModel.Email );
+            var validEmail = IsValidEmail(viewModel.Email);
 
             if (validEmail)
             {

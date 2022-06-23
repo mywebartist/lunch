@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LunchScheduler.Service
+﻿namespace LunchScheduler.Service
 {
     internal class ConfigService
     {
@@ -15,17 +11,10 @@ namespace LunchScheduler.Service
         public static string orgsListUrl = baseUrl + "orgs";
         public static string userJoinOrgUrl = baseUrl + "org/join";
         public static string userProfileUrl = baseUrl + "profile";
-       // public static string addItemUrl = baseUrl + "items";
         public static string getUserOrgsUrl = baseUrl + "user/orgs";
         public static string userItemsSelectionUrl = baseUrl + "items-selection";
-
         public static string getOrdersUrl = baseUrl + "org/orders";
 
-
-
-    }  
-
-
-
+    }
 
 }

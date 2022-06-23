@@ -1,10 +1,11 @@
 ﻿using LunchScheduler.Model;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace LunchScheduler.Service.ResponseModel
 {
-    public class ItemsResponseModel
+    public class OrganizationItemsListResponseModel
     {
         public int status_code { get; set; }
         public string message { get; set; }
@@ -18,4 +19,5 @@ namespace LunchScheduler.Service.ResponseModel
         public object prev_page_url { get; set; }
         public int to { get; set; }
     }
+
 }

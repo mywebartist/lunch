@@ -5,36 +5,36 @@ using System.Collections.ObjectModel;
 
 namespace LunchScheduler.ViewModel
 {
-    public class OrganizationsListViewModel : BaseViewModel
+    public class OrganizationItemsViewModel : BaseViewModel
     {
-        public OrganizationsListViewModel()
+        public OrganizationItemsViewModel()
         {
-            getOrganizationsList();
+            getOrganizationsItemsList();
         }
-
-        ObservableCollection<OrganizationModel> _orgsList;
-        public ObservableCollection<OrganizationModel> OrgsListData
+        ObservableCollection<ItemModel> _itemsList;
+        public ObservableCollection<ItemModel> OrgItemsListData
         {
-            get { return _orgsList; }
+            get { return _itemsList; }
             set
             {
-                _orgsList = value;
+                _itemsList = value;
                 OnPropertyChanged();
             }
 
         }
-        public async void getOrganizationsList()
+
+        public async void getOrganizationsItemsList()
         {
             try
             {
                 var web = new AccountService();
 
 
-                var result = await web.getOrganizationsListApi();
+                var result = await web.getOrganizationsItemsListApi();
                 if (result != null)
                 {
 
-                    OrgsListData = new ObservableCollection<OrganizationModel>(result.data);
+                    OrgItemsListData = new ObservableCollection<ItemModel>(result.data);
                 }
                 else
                 {
@@ -48,4 +48,8 @@ namespace LunchScheduler.ViewModel
             }
         }
     }
+
+
+
+
 }

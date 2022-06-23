@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LunchScheduler.ViewModel
+﻿namespace LunchScheduler.ViewModel
 {
     public class PinViewModel : BaseViewModel
     {
-
-
         string pin;
         public string Pin
         {
@@ -18,11 +12,6 @@ namespace LunchScheduler.ViewModel
                 OnPropertyChanged();
             }
 
-
-
-
         }
     }
-
-    
 }

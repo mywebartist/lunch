@@ -1,9 +1,9 @@
-﻿using LunchScheduler.Model;
+﻿using LunchScheduler.Helpers;
+using LunchScheduler.Model;
 using LunchScheduler.Service.ResponseModel;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
@@ -13,7 +13,6 @@ namespace LunchScheduler.Service
 {
     public class AccountService : BaseService
     {
-
         public async Task<LoginResponseModel> LoginApi(string email)
         {
 
@@ -27,12 +26,12 @@ namespace LunchScheduler.Service
                 var payload = new StringContent(jObj.ToString(), Encoding.UTF8, "application/json");
                 var result = await _client.PostAsync(uri, payload);
 
-              
+
                 if (result != null && result.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     string responseStr = await result.Content.ReadAsStringAsync();
-                    Debug.WriteLine( "response: " +responseStr);
-       
+                    Debug.WriteLine("response: " + responseStr);
+
                     var responseObj = await Task.Run(() =>
                     {
                         return JsonConvert.DeserializeObject<LoginResponseModel>(responseStr);
@@ -43,23 +42,19 @@ namespace LunchScheduler.Service
             }
             catch (Exception e)
             {
-                Debug.WriteLine("response_error: "+  e.Message);
-   
+                Debug.WriteLine("response_error: " + e.Message);
+
             }
 
             return null;
 
         }
-
-
-
         public async Task<ItemsResponseModel> getItemsApi(int organization_id)
         {
-
             try
             {
                 Uri uri = new Uri(ConfigService.itemsUrl + "?organization_id=" + organization_id);
-  
+
                 var result = await _client.GetAsync(uri);
 
                 if (result != null && result.StatusCode == System.Net.HttpStatusCode.OK)
@@ -78,16 +73,13 @@ namespace LunchScheduler.Service
             catch (Exception e)
             {
                 Debug.WriteLine("response_error: " + e.Message);
-                
+
             }
-
             return null;
-
         }
 
         public async Task<ItemsResponseModel> getUserSelectedItemsApi(int organization_id)
         {
-
             try
             {
                 Uri uri = new Uri(ConfigService.userItemsSelectionUrl + "?organization_id=" + organization_id);
@@ -104,7 +96,6 @@ namespace LunchScheduler.Service
                         return JsonConvert.DeserializeObject<ItemsResponseModel>(responseStr);
                     });
                     return responseObj;
-
                 }
             }
             catch (Exception e)
@@ -116,7 +107,6 @@ namespace LunchScheduler.Service
             return null;
 
         }
-
         public async Task<ChefOrderResponseModel> getOrdersApi(int organization_id)
         {
 
@@ -146,9 +136,7 @@ namespace LunchScheduler.Service
             }
 
             return null;
-
         }
-
         public async Task<PinResponseModel> getAccessToken(string pinCode)
         {
 
@@ -185,8 +173,6 @@ namespace LunchScheduler.Service
 
         }
 
-
-
         public async Task<OrganizationsListResponseModel> getOrganizationsListApi()
         {
 
@@ -214,6 +200,35 @@ namespace LunchScheduler.Service
                 Debug.WriteLine("response_error: " + e.Message);
 
             }
+            return null;
+        }
+
+        public async Task<OrganizationItemsListResponseModel> getOrganizationsItemsListApi()
+        {
+            try
+            {
+                Uri uri = new Uri(ConfigService.itemsUrl + "?organization_id=" + Settings.ActiveOrganizationId);
+
+                var result = await _client.GetAsync(uri);
+
+                if (result != null && result.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    string responseStr = await result.Content.ReadAsStringAsync();
+                    Debug.WriteLine("response: " + responseStr);
+                    //Console.WriteLine(responseStr);
+                    var responseObj = await Task.Run(() =>
+                    {
+                        return JsonConvert.DeserializeObject<OrganizationItemsListResponseModel>(responseStr);
+                    });
+                    return responseObj;
+
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("response_error: " + e.Message);
+
+            }
 
             return null;
 
@@ -229,7 +244,7 @@ namespace LunchScheduler.Service
                 Uri uri = new Uri(ConfigService.userJoinOrgUrl);
 
                 JObject jObj = new JObject();
-               jObj.Add("organization_id", organization_id);
+                jObj.Add("organization_id", organization_id);
 
                 var payload = new StringContent(jObj.ToString(), Encoding.UTF8, "application/json");
                 var result = await _client.PostAsync(uri, payload);
@@ -369,7 +384,6 @@ namespace LunchScheduler.Service
 
         }
 
-
         public async Task<OrganizationModel> getUserOrgsApi()
         {
 
@@ -401,10 +415,6 @@ namespace LunchScheduler.Service
             return null;
 
         }
-
-
-
-
 
     }
 }

@@ -1,13 +1,7 @@
 ﻿using LunchScheduler.Model;
 using LunchScheduler.Service;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
 
 namespace LunchScheduler.ViewModel
 {
@@ -15,10 +9,8 @@ namespace LunchScheduler.ViewModel
     {
         public ProfileViewModel()
         {
-           
 
             getUserProfile();
-            
 
         }
 
@@ -66,15 +58,10 @@ namespace LunchScheduler.ViewModel
                 OnPropertyChanged();
             }
 
-            
-    }
 
-
-
+        }
         private async void getUserProfile()
         {
- 
-
             var web = new AccountService();
             var result = await web.getUserProfileApi();
 
@@ -87,27 +74,16 @@ namespace LunchScheduler.ViewModel
                 Email = result.email;
 
 
-                if (result.orgs != null) {
+                if (result.orgs != null)
+                {
                     OrgsListData = new ObservableCollection<OrganizationModel>(result.orgs);
                 }
-             
-
-                //Email = "user#s email";
-                //Organization = "user#s org";
             }
             else
             {
                 // api is down
-               App.Current.MainPage.DisplayAlert("alert", "backend system not working", "ok");
+                await App.Current.MainPage.DisplayAlert("alert", "backend system not working", "ok");
             }
-
-
-
         }
-
-
-     
-
-
     }
 }

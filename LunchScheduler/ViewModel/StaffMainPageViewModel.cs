@@ -3,12 +3,8 @@ using LunchScheduler.Model;
 using LunchScheduler.Service;
 using LunchScheduler.Service.ResponseModel;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
 
 namespace LunchScheduler.ViewModel
 {
@@ -16,43 +12,18 @@ namespace LunchScheduler.ViewModel
     {
         public StaffMainPageViewModel()
         {
-            //OrderData = new ObservableCollection<StaffModel>();
-            //OrderData.Add(new StaffModel()
-            //{
-            //    ItemName = "item 1",
-            //    ScheduleTime = "24 May 2022"
-
-            //}) ;
-
-
-            //OrderData.Add(new StaffModel()
-            //{
-            //    ItemName = "item 2",
-            //    ScheduleTime = "26 May 2022"
-
-            //});
-
             OrderData = new ObservableCollection<IGrouping<string, ItemModel>>();
-
-
             // no organizatin
-            if (Settings.ActiveOrganizationId ==  "0")
+            if (Settings.ActiveOrganizationId == "0")
             {
                 Message = "you dont have any organization. join or make new one.";
-
             }
             else
             {
-                 getItems();
+                getItems();
             }
-
-
-           
-
         }
 
-
-        //ObservableCollection<ItemModel> _orderData;
         ObservableCollection<IGrouping<string, ItemModel>> _orderData;
         public ObservableCollection<IGrouping<string, ItemModel>> OrderData
         {
@@ -74,25 +45,17 @@ namespace LunchScheduler.ViewModel
                 OnPropertyChanged();
             }
         }
-
-
         public async void getItems()
         {
             try
             {
                 var web = new AccountService();
 
-
-                var result = await web.getUserSelectedItemsApi( Convert.ToInt16(  Settings.ActiveOrganizationId ) );
-                if (result != null && result.data != null && result.data.Count > 0   )
+                var result = await web.getUserSelectedItemsApi(Convert.ToInt16(Settings.ActiveOrganizationId));
+                if (result != null && result.data != null && result.data.Count > 0)
                 {
-
                     var groupList = result.data.GroupBy(x => x.scheduled_at.ToString("dd MMM yyyy")).ToList();
                     OrderData = new ObservableCollection<IGrouping<string, ItemModel>>(groupList);
-
-                   
-
-
                 }
                 else
                 {
@@ -101,12 +64,11 @@ namespace LunchScheduler.ViewModel
                     DisplayAlert("alert", "system not working", "ok");
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-
+                throw new Exception("Put your error message here.", e);
             }
         }
-
         private void DisplayAlert(string v1, object message, string v2)
         {
             throw new NotImplementedException();

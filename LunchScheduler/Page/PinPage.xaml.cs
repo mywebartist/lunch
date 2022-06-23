@@ -3,11 +3,7 @@ using LunchScheduler.Page;
 using LunchScheduler.Service;
 using LunchScheduler.ViewModel;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -49,7 +45,7 @@ namespace LunchScheduler
 
                 if (result.status_code == 0)
                 {
-                    DisplayAlert("alert", result.message, "ok");
+                    await DisplayAlert("alert", result.message, "ok");
                 }
                 else
                 {
@@ -57,15 +53,15 @@ namespace LunchScheduler
                     Settings.APIKey = result.XApikey;
                     Debug.WriteLine("response token: " + result.XApikey);
 
-                   // Settings.OrganizationIds = result.organization_ids;
+                    // Settings.OrganizationIds = result.organization_ids;
                     Settings.ActiveOrganizationId = result.user.default_org.ToString();
 
                     if (Settings.ActiveOrganizationId == "0")
                     {
                         Settings.ActiveOrganizationName = "";
                     }
-                  
 
+                    Settings.UserEmail = result.user.email;
 
 
                     // login ok
@@ -76,7 +72,7 @@ namespace LunchScheduler
             else
             {
                 // api is down
-                DisplayAlert("alert", "backend system not working", "ok");
+                await DisplayAlert("alert", "backend system not working", "ok");
             }
 
 
