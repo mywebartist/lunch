@@ -19,6 +19,8 @@ namespace LunchScheduler.Service
         public static string getUserOrgsUrl = baseUrl + "user/orgs";
         public static string userItemsSelectionUrl = baseUrl + "items-selection";
 
+        public static string getOrdersUrl = baseUrl + "org/orders";
+
 
 
     }  

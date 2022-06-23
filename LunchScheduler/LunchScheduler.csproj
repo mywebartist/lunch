@@ -23,19 +23,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="ChefItemsManagePage.xaml">
+    <EmbeddedResource Update="Page\ChefItemsManagePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="ChefViewOrdersPage.xaml">
+    <EmbeddedResource Update="Page\ChefViewOrdersPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="LoginPage.xaml">
+    <EmbeddedResource Update="Page\LoginPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="OrgAdminPage.xaml">
+    <EmbeddedResource Update="Page\OrgAdminPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="OrganizationsListPage.xaml">
+    <EmbeddedResource Update="Page\OrganizationsListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Page\MainMenuPage.xaml">
@@ -50,19 +50,19 @@
     <EmbeddedResource Update="Page\TabbedPage1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="PinPage.xaml">
+    <EmbeddedResource Update="Page\PinPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="ProfilePage.xaml">
+    <EmbeddedResource Update="Page\ProfilePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="RoleManagePage.xaml">
+    <EmbeddedResource Update="Page\RoleManagePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="StaffItemsSelectionPage.xaml">
+    <EmbeddedResource Update="Page\StaffItemsSelectionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="StaffMainPage.xaml">
+    <EmbeddedResource Update="Page\StaffMainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\NavigationBarView.xaml">

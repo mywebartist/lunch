@@ -117,6 +117,38 @@ namespace LunchScheduler.Service
 
         }
 
+        public async Task<ChefOrderResponseModel> getOrdersApi(int organization_id)
+        {
+
+            try
+            {
+                Uri uri = new Uri(ConfigService.getOrdersUrl + "?organization_id=" + organization_id);
+
+                var result = await _client.GetAsync(uri);
+
+                if (result != null && result.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    string responseStr = await result.Content.ReadAsStringAsync();
+                    Debug.WriteLine("response: " + responseStr);
+                    //Console.WriteLine(responseStr);
+                    var responseObj = await Task.Run(() =>
+                    {
+                        return JsonConvert.DeserializeObject<ChefOrderResponseModel>(responseStr);
+                    });
+                    return responseObj;
+
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("response_error: " + e.Message);
+
+            }
+
+            return null;
+
+        }
+
         public async Task<PinResponseModel> getAccessToken(string pinCode)
         {
 

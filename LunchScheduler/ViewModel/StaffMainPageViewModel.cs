@@ -87,7 +87,7 @@ namespace LunchScheduler.ViewModel
                 if (result != null && result.data != null && result.data.Count > 0   )
                 {
 
-                    var groupList = result.data.GroupBy(x => x.scheduled_at).ToList();
+                    var groupList = result.data.GroupBy(x => x.scheduled_at.ToString("dd MMM yyyy")).ToList();
                     OrderData = new ObservableCollection<IGrouping<string, ItemModel>>(groupList);
 
                    
