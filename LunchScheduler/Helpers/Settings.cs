@@ -24,11 +24,6 @@ namespace LunchScheduler.Helpers
         static readonly string ActiveOrganizationNameKeyDefault = string.Empty;
 
         
-        
-
-       
-
-
         public static User CurrentUser
         {
             get
@@ -68,26 +63,6 @@ namespace LunchScheduler.Helpers
             set => Preferences.Set(ActiveOrganizationNameKey, value);
         }
 
-       // public static List<int> OrganizationIds
-      //  {
-       //     get
-       //    {
-        //        var str = Preferences.Get(OrganizationIdListKey, null);
-         //       if (!string.IsNullOrEmpty(str))
-        //        {
-                    // return str.Deserialize<List<int>>();
-         //           return JsonConvert.DeserializeObject<List<int>>(str);
-         //       }
-             //   return new  List<int>() ;
-         //   }
-        //    set
-       //     {
-        //        Preferences.Set(OrganizationIdListKey, JsonConvert.SerializeObject(value));
-       //     }
-      //  }
-
-
-       
 
     }
 

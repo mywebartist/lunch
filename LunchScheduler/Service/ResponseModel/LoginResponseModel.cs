@@ -14,7 +14,6 @@ namespace LunchScheduler.Service.ResponseModel
 
 
 
-
     public class User
     {
 

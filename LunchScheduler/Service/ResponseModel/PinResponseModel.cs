@@ -9,8 +9,6 @@ namespace LunchScheduler.Service.ResponseModel
     public class PinResponseModel
     {
 
-
-       
             [JsonProperty("x-apikey")]
             public string XApikey { get; set; }
             public int status_code { get; set; }
