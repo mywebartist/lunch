@@ -5,12 +5,14 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal" >
-                <DatePicker HorizontalOptions="StartAndExpand"  Margin="20,0,20,0" Format="dddd, d MMM yyyy" x:Name="itemDatePicker" Date="{Binding SelectedDate}" >
+                <DatePicker HorizontalOptions="CenterAndExpand"  Margin="20,0,20,0" Format="dddd, d MMM yyyy" x:Name="itemDatePicker" Date="{Binding SelectedDate}" >
 
                 </DatePicker>
-                <Image Source="calendar.png" HorizontalOptions="End"  VerticalOptions="CenterAndExpand" HeightRequest="30" WidthRequest="30" ></Image>
+                <!--<Image Source="calendar.png" HorizontalOptions="End"  VerticalOptions="CenterAndExpand" HeightRequest="30" WidthRequest="30" ></Image>-->
             </StackLayout>
-           
+
+            <Button Text="Save" Clicked="Button_Clicked" Margin="20, 0" ></Button>
+            
             <ListView 
                 x:Name="GroupedView"
                 ItemsSource="{Binding OrderSelectionData}" RowHeight="60"  SeparatorVisibility="Default" SeparatorColor="LightGray" >
@@ -20,7 +22,7 @@
                             <Grid ColumnDefinitions="*, Auto"  Padding="20,0"  >
                                 <StackLayout VerticalOptions="CenterAndExpand" >
                                     <StackLayout Orientation="Horizontal"   >
-                                        <CheckBox IsChecked="{Binding isSelected}" ></CheckBox>
+                                        <CheckBox IsChecked="{Binding selected}" ></CheckBox>
 
                                         <Label VerticalOptions="CenterAndExpand" Grid.Column="0" Text="{Binding name}" TextColor="Black" >
                                         </Label>
@@ -28,7 +30,7 @@
 
                                     <Label  Margin="40,0,0,0" Grid.Column="0" Text="{Binding description}" TextColor="Red" >
                                     </Label>
-                                    <Button Text="Save" ></Button>
+                                    
                                 </StackLayout>
 
 

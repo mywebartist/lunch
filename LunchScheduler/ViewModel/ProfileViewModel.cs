@@ -82,7 +82,7 @@ namespace LunchScheduler.ViewModel
             else
             {
                 // api is down
-                await App.Current.MainPage.DisplayAlert("alert", "backend system not working", "ok");
+               App.Current.MainPage.DisplayAlert("alert", "backend system not working", "ok");
             }
         }
     }

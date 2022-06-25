@@ -61,17 +61,15 @@ namespace LunchScheduler.ViewModel
                 {
                     Message = (OrderData != null && OrderData.Count > 0) ? "" : "you dont have item selection in this org";
                     // api is down
-                    DisplayAlert("alert", "system not working", "ok");
+                    App.Current.MainPage.DisplayAlert("alert", "system not working", "ok");
                 }
             }
             catch (Exception e)
             {
-                throw new Exception("Put your error message here.", e);
+                // throw new Exception("Put your error message here.", e);
+                
             }
         }
-        private void DisplayAlert(string v1, object message, string v2)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

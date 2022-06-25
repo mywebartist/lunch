@@ -1,6 +1,7 @@
 ﻿using LunchScheduler.Helpers;
 using LunchScheduler.Page;
 using System;
+using System.Diagnostics;
 using Xamarin.Forms;
 
 namespace LunchScheduler
@@ -11,13 +12,15 @@ namespace LunchScheduler
         {
             InitializeComponent();
 
-            if (String.IsNullOrEmpty(Settings.APIKey))
+            if (String.IsNullOrEmpty(Settings.APIKey) || String.IsNullOrEmpty(Settings.UserEmail))
             {
                 MainPage = new NavigationPage(new LoginPage());
+                Debug.WriteLine("response: goto login page");
             }
             else
             {
                 MainPage = new NavigationPage(new MainMenuPage());
+                Debug.WriteLine("response: goto main page");
             }
         }
     }

@@ -49,6 +49,51 @@ namespace LunchScheduler.Service
             return null;
 
         }
+
+        public async Task<ServiceResponseModel> addUserItemsSelectionApi(int organization_id, int[] items, string scheduled_at )
+        {
+
+            try
+            {
+                Uri uri = new Uri(ConfigService.addUserItemsSelectionUrl);
+
+                var data = string.Join(",", items);
+
+                JArray jArr = new JArray();
+                jArr.Add( items);
+
+                JObject jObj = new JObject();
+                jObj.Add("organization_id", organization_id);
+                jObj.Add("items_ids", "[" + data + "]");
+                jObj.Add("scheduled_at", scheduled_at);
+
+                var payload = new StringContent(jObj.ToString(), Encoding.UTF8, "application/json");
+                var result = await _client.PostAsync(uri, payload);
+
+
+                if (result != null && result.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    string responseStr = await result.Content.ReadAsStringAsync();
+                    Debug.WriteLine("response: " + responseStr);
+
+                    var responseObj = await Task.Run(() =>
+                    {
+                        return JsonConvert.DeserializeObject<ServiceResponseModel>(responseStr);
+                    });
+                    return responseObj;
+
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("response_error: " + e.Message);
+
+            }
+
+            return null;
+
+        }
+
         public async Task<ItemsResponseModel> getItemsApi(int organization_id)
         {
             try
@@ -90,10 +135,18 @@ namespace LunchScheduler.Service
                 {
                     string responseStr = await result.Content.ReadAsStringAsync();
                     Debug.WriteLine("response: " + responseStr);
-                    //Console.WriteLine(responseStr);
+                    
+
+                    //buggg
                     var responseObj = await Task.Run(() =>
                     {
                         return JsonConvert.DeserializeObject<ItemsResponseModel>(responseStr);
+                      //  return JsonConvert.DeserializeObject<ItemsResponseModel>(responseStr, new JsonSerializerSettings()
+                       // {
+                       //     MissingMemberHandling = MissingMemberHandling.Ignore,
+                       //     NullValueHandling = NullValueHandling.Ignore,
+                     ////   });
+
                     });
                     return responseObj;
                 }
@@ -178,7 +231,7 @@ namespace LunchScheduler.Service
 
             try
             {
-                Uri uri = new Uri(ConfigService.orgsListUrl);
+                Uri uri = new Uri(ConfigService.orgsUrl);
 
                 var result = await _client.GetAsync(uri);
 
@@ -346,7 +399,7 @@ namespace LunchScheduler.Service
 
         }
 
-        public async Task<OrganizationModel> AddItemApi(string organization_id, string name)
+        public async Task<ItemModel> AddItemApi(string organization_id, string itemName, string itemDescription)
         {
 
             try
@@ -354,8 +407,48 @@ namespace LunchScheduler.Service
                 Uri uri = new Uri(ConfigService.itemsUrl);
 
                 JObject jObj = new JObject();
-                jObj.Add("name", name);
+                jObj.Add("name", itemName);
+                jObj.Add("description", itemDescription);
                 jObj.Add("organization_id", organization_id);
+
+                var payload = new StringContent(jObj.ToString(), Encoding.UTF8, "application/json");
+                var result = await _client.PostAsync(uri, payload);
+
+
+                if (result != null && result.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    string responseStr = await result.Content.ReadAsStringAsync();
+                    Debug.WriteLine("response: " + responseStr);
+
+                    var responseObj = await Task.Run(() =>
+                    {
+                        return JsonConvert.DeserializeObject<ItemModel>(responseStr);
+                    });
+                    return responseObj;
+
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("response_error: " + e.Message);
+
+            }
+
+            return null;
+
+        }
+
+        public async Task<OrganizationModel> AddNewOrgApi(string orgName, string orgDescription)
+        {
+
+            try
+            {
+                Uri uri = new Uri(ConfigService.orgsUrl);
+
+                JObject jObj = new JObject();
+                jObj.Add("name", orgName);
+                jObj.Add("description", orgDescription);
+                //jObj.Add("organization_id", organization_id);
 
                 var payload = new StringContent(jObj.ToString(), Encoding.UTF8, "application/json");
                 var result = await _client.PostAsync(uri, payload);

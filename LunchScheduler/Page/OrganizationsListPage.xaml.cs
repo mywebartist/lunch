@@ -29,7 +29,7 @@ namespace LunchScheduler
 
                 if (result.status_code == 0)
                 {
-                    DisplayAlert("alert", result.message, "ok");
+                    await DisplayAlert("alert", result.message, "ok");
                 }
                 else
                 {
@@ -44,7 +44,7 @@ namespace LunchScheduler
             else
             {
                 // api is down
-                DisplayAlert("alert", "backend system not working", "ok");
+                await DisplayAlert("alert", "backend system not working", "ok");
             }
 
 

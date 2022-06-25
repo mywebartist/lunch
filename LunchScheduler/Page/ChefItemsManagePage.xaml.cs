@@ -23,7 +23,7 @@ namespace LunchScheduler
 
 
             var web = new AccountService();
-            var result = await web.AddItemApi(Settings.ActiveOrganizationId, viewModel.itemName);
+            var result = await web.AddItemApi(Settings.ActiveOrganizationId, viewModel.itemName, viewModel.description);
             if (result != null)
             {
 

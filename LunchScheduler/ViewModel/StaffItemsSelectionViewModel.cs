@@ -4,6 +4,7 @@ using LunchScheduler.Service;
 using LunchScheduler.Service.ResponseModel;
 using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace LunchScheduler.ViewModel
 {
@@ -25,7 +26,15 @@ namespace LunchScheduler.ViewModel
                 var result = await web.getItemsApi(Convert.ToInt16(Settings.ActiveOrganizationId));
                 if (result != null)
                 {
-                    OrderSelectionData = new ObservableCollection<ItemModel>(result.data);
+                    if (result.status_code == 0)
+                    {
+                        Debug.WriteLine("response: " + result.message);
+                    }
+                    if (result.status_code == 1)
+                    {
+                        OrderSelectionData = new ObservableCollection<ItemModel>(result.data);
+                    }
+                   
                 }
                 else
                 {

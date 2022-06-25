@@ -47,53 +47,53 @@ map_aname.8:
 
 	.type	map_aname.9, %object
 map_aname.9:
-	.asciz	"Xamarin.Essentials"
-	.size	map_aname.9, 19
+	.asciz	"LunchScheduler.Android"
+	.size	map_aname.9, 23
 
 	.type	map_aname.10, %object
 map_aname.10:
-	.asciz	"Xamarin.AndroidX.Lifecycle.LiveData.Core"
-	.size	map_aname.10, 41
+	.asciz	"Xamarin.Essentials"
+	.size	map_aname.10, 19
 
 	.type	map_aname.11, %object
 map_aname.11:
-	.asciz	"Xamarin.AndroidX.Legacy.Support.Core.UI"
-	.size	map_aname.11, 40
+	.asciz	"Xamarin.AndroidX.Lifecycle.LiveData.Core"
+	.size	map_aname.11, 41
 
 	.type	map_aname.12, %object
 map_aname.12:
-	.asciz	"Xamarin.AndroidX.SavedState"
-	.size	map_aname.12, 28
+	.asciz	"Xamarin.AndroidX.Legacy.Support.Core.UI"
+	.size	map_aname.12, 40
 
 	.type	map_aname.13, %object
 map_aname.13:
-	.asciz	"Xamarin.Google.Android.Material"
-	.size	map_aname.13, 32
+	.asciz	"Xamarin.AndroidX.SavedState"
+	.size	map_aname.13, 28
 
 	.type	map_aname.14, %object
 map_aname.14:
-	.asciz	"Xamarin.AndroidX.DrawerLayout"
-	.size	map_aname.14, 30
+	.asciz	"Xamarin.Google.Android.Material"
+	.size	map_aname.14, 32
 
 	.type	map_aname.15, %object
 map_aname.15:
-	.asciz	"Xamarin.AndroidX.RecyclerView"
+	.asciz	"Xamarin.AndroidX.DrawerLayout"
 	.size	map_aname.15, 30
 
 	.type	map_aname.16, %object
 map_aname.16:
-	.asciz	"Xamarin.AndroidX.AppCompat"
-	.size	map_aname.16, 27
+	.asciz	"Xamarin.AndroidX.RecyclerView"
+	.size	map_aname.16, 30
 
 	.type	map_aname.17, %object
 map_aname.17:
-	.asciz	"FormsViewGroup"
-	.size	map_aname.17, 15
+	.asciz	"Xamarin.AndroidX.AppCompat"
+	.size	map_aname.17, 27
 
 	.type	map_aname.18, %object
 map_aname.18:
-	.asciz	"LunchScheduler.Android"
-	.size	map_aname.18, 23
+	.asciz	"FormsViewGroup"
+	.size	map_aname.18, 15
 
 	.type	map_aname.19, %object
 map_aname.19:

@@ -63,7 +63,12 @@ namespace LunchScheduler.Page
             else if (item.Id == 7)
             {
 
-                page = new LoginPage();
+               page = new AddNewOrgPage();
+            }
+            else if (item.Id == 8)
+            {
+               page = new LoginPage();
+                
             }
 
             page.Title = item.Title;

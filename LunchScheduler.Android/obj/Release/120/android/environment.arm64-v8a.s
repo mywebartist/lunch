@@ -25,9 +25,7 @@ app_environment_variables:
 	.xword	.L.autostr.8
 	.xword	.L.autostr.9
 	.xword	.L.autostr.10
-	.xword	.L.autostr.11
-	.xword	.L.autostr.12
-	.size	app_environment_variables, 96
+	.size	app_environment_variables, 80
 
 	.section	.data, "aw", @progbits
 	.type	app_system_properties, @object
@@ -295,121 +293,121 @@ dso_cache:
 	.xword	0x1816f285730a5c5d	// hash, from name: mono-native
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.13	// name: libmono-native.so
+	.xword	.L.autostr.11	// name: libmono-native.so
 	.xword	0x0	// handle
 
 	.xword	0x2d0a981995adda1a	// hash, from name: mono-btls-shared
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.14	// name: libmono-btls-shared.so
+	.xword	.L.autostr.12	// name: libmono-btls-shared.so
 	.xword	0x0	// handle
 
 	.xword	0x324e6d52264455c3	// hash, from name: libmono-native.so
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.15	// name: libmono-native.so
+	.xword	.L.autostr.13	// name: libmono-native.so
 	.xword	0x0	// handle
 
 	.xword	0x35e64c6c9f4b9e72	// hash, from name: libmono-btls-shared
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.16	// name: libmono-btls-shared.so
+	.xword	.L.autostr.14	// name: libmono-btls-shared.so
 	.xword	0x0	// handle
 
 	.xword	0x65d94d818a60a3a7	// hash, from name: monodroid.so
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.17	// name: libmonodroid.so
+	.xword	.L.autostr.15	// name: libmonodroid.so
 	.xword	0x0	// handle
 
 	.xword	0x6b1a4fee66f8a525	// hash, from name: libxa-internal-api
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.18	// name: libxa-internal-api.so
+	.xword	.L.autostr.16	// name: libxa-internal-api.so
 	.xword	0x0	// handle
 
 	.xword	0x6b6b0562539657f0	// hash, from name: libmonosgen-2.0
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.19	// name: libmonosgen-2.0.so
+	.xword	.L.autostr.17	// name: libmonosgen-2.0.so
 	.xword	0x0	// handle
 
 	.xword	0x74778f1b27881b01	// hash, from name: libmonodroid.so
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.20	// name: libmonodroid.so
+	.xword	.L.autostr.18	// name: libmonodroid.so
 	.xword	0x0	// handle
 
 	.xword	0x78600b2172b4e8ae	// hash, from name: mono-btls-shared.so
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.21	// name: libmono-btls-shared.so
+	.xword	.L.autostr.19	// name: libmono-btls-shared.so
 	.xword	0x0	// handle
 
 	.xword	0x7daaf3a073c44dd7	// hash, from name: monodroid
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.22	// name: libmonodroid.so
+	.xword	.L.autostr.20	// name: libmonodroid.so
 	.xword	0x0	// handle
 
 	.xword	0x819997bb1318c38f	// hash, from name: xa-internal-api.so
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.23	// name: libxa-internal-api.so
+	.xword	.L.autostr.21	// name: libxa-internal-api.so
 	.xword	0x0	// handle
 
 	.xword	0x8da9f07ad98f854a	// hash, from name: mono-native.so
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.24	// name: libmono-native.so
+	.xword	.L.autostr.22	// name: libmono-native.so
 	.xword	0x0	// handle
 
 	.xword	0x9fe56834a335f553	// hash, from name: libmonodroid
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.25	// name: libmonodroid.so
+	.xword	.L.autostr.23	// name: libmonodroid.so
 	.xword	0x0	// handle
 
 	.xword	0xb43ec55666e9bac2	// hash, from name: xa-internal-api
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.26	// name: libxa-internal-api.so
+	.xword	.L.autostr.24	// name: libxa-internal-api.so
 	.xword	0x0	// handle
 
 	.xword	0xb9af7500aad479f3	// hash, from name: libmono-btls-shared.so
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.27	// name: libmono-btls-shared.so
+	.xword	.L.autostr.25	// name: libmono-btls-shared.so
 	.xword	0x0	// handle
 
 	.xword	0xc82f57facf333f6a	// hash, from name: monosgen-2.0.so
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.28	// name: libmonosgen-2.0.so
+	.xword	.L.autostr.26	// name: libmonosgen-2.0.so
 	.xword	0x0	// handle
 
 	.xword	0xcd875618fc6f174a	// hash, from name: libxa-internal-api.so
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.29	// name: libxa-internal-api.so
+	.xword	.L.autostr.27	// name: libxa-internal-api.so
 	.xword	0x0	// handle
 
 	.xword	0xe156906e01e8a274	// hash, from name: libmono-native
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.30	// name: libmono-native.so
+	.xword	.L.autostr.28	// name: libmono-native.so
 	.xword	0x0	// handle
 
 	.xword	0xe7ff637b8de7a85b	// hash, from name: libmonosgen-2.0.so
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.31	// name: libmonosgen-2.0.so
+	.xword	.L.autostr.29	// name: libmonosgen-2.0.so
 	.xword	0x0	// handle
 
 	.xword	0xe935f11a41b02b22	// hash, from name: monosgen-2.0
 	.byte	0x0	// ignore
 	.zero	7
-	.xword	.L.autostr.32	// name: libmonosgen-2.0.so
+	.xword	.L.autostr.30	// name: libmonosgen-2.0.so
 	.xword	0x0	// handle
 
 	.size	dso_cache, 640
@@ -435,7 +433,7 @@ application_config:
 	.byte	0x1	// bound_stream_io_exception_type
 	.zero	2
 	.word	0x3	// package_naming_policy
-	.word	0xc	// environment_variable_count
+	.word	0xa	// environment_variable_count
 	.word	0x0	// system_property_count
 	.word	0x2b	// number_of_assemblies_in_apk
 	.word	0x0	// bundled_assembly_name_width
@@ -443,7 +441,7 @@ application_config:
 	.word	0x14	// number_of_dso_cache_entries
 	.word	0x0	// mono_components_mask
 	.zero	4
-	.xword	.L.autostr.33	// android_package_name
+	.xword	.L.autostr.31	// android_package_name
 	.size	application_config, 56
 
 
@@ -455,63 +453,63 @@ application_config:
 
 	.type	.L.autostr.1, @object
 .L.autostr.1:
-	.asciz	"MONO_DEBUG"
-	.size	.L.autostr.1, 11
+	.asciz	"MONO_GC_PARAMS"
+	.size	.L.autostr.1, 15
 
 	.type	.L.autostr.2, @object
 .L.autostr.2:
-	.asciz	"gen-compact-seq-points"
-	.size	.L.autostr.2, 23
+	.asciz	"major=marksweep-conc"
+	.size	.L.autostr.2, 21
 
 	.type	.L.autostr.3, @object
 .L.autostr.3:
-	.asciz	"MONO_GC_PARAMS"
-	.size	.L.autostr.3, 15
+	.asciz	"XAMARIN_BUILD_ID"
+	.size	.L.autostr.3, 17
 
 	.type	.L.autostr.4, @object
 .L.autostr.4:
-	.asciz	"major=marksweep-conc"
-	.size	.L.autostr.4, 21
+	.asciz	"5274dd03-f7e1-4065-a6fe-7f6429076745"
+	.size	.L.autostr.4, 37
 
 	.type	.L.autostr.5, @object
 .L.autostr.5:
-	.asciz	"XAMARIN_BUILD_ID"
-	.size	.L.autostr.5, 17
+	.asciz	"XA_HTTP_CLIENT_HANDLER_TYPE"
+	.size	.L.autostr.5, 28
 
 	.type	.L.autostr.6, @object
 .L.autostr.6:
-	.asciz	"38192639-73e1-4cfd-9c83-acb459b90d8b"
-	.size	.L.autostr.6, 37
+	.asciz	"Xamarin.Android.Net.AndroidClientHandler"
+	.size	.L.autostr.6, 41
 
 	.type	.L.autostr.7, @object
 .L.autostr.7:
-	.asciz	"XA_HTTP_CLIENT_HANDLER_TYPE"
-	.size	.L.autostr.7, 28
+	.asciz	"XA_TLS_PROVIDER"
+	.size	.L.autostr.7, 16
 
 	.type	.L.autostr.8, @object
 .L.autostr.8:
-	.asciz	"Xamarin.Android.Net.AndroidClientHandler"
-	.size	.L.autostr.8, 41
+	.asciz	"btls"
+	.size	.L.autostr.8, 5
 
 	.type	.L.autostr.9, @object
 .L.autostr.9:
-	.asciz	"XA_TLS_PROVIDER"
-	.size	.L.autostr.9, 16
+	.asciz	"__XA_PACKAGE_NAMING_POLICY__"
+	.size	.L.autostr.9, 29
 
 	.type	.L.autostr.10, @object
 .L.autostr.10:
-	.asciz	"btls"
-	.size	.L.autostr.10, 5
+	.asciz	"LowercaseCrc64"
+	.size	.L.autostr.10, 15
 
 	.type	.L.autostr.11, @object
 .L.autostr.11:
-	.asciz	"__XA_PACKAGE_NAMING_POLICY__"
-	.size	.L.autostr.11, 29
+	.asciz	"libmono-native.so"
+	.size	.L.autostr.11, 18
 
 	.type	.L.autostr.12, @object
 .L.autostr.12:
-	.asciz	"LowercaseCrc64"
-	.size	.L.autostr.12, 15
+	.asciz	"libmono-btls-shared.so"
+	.size	.L.autostr.12, 23
 
 	.type	.L.autostr.13, @object
 .L.autostr.13:
@@ -525,28 +523,28 @@ application_config:
 
 	.type	.L.autostr.15, @object
 .L.autostr.15:
-	.asciz	"libmono-native.so"
-	.size	.L.autostr.15, 18
+	.asciz	"libmonodroid.so"
+	.size	.L.autostr.15, 16
 
 	.type	.L.autostr.16, @object
 .L.autostr.16:
-	.asciz	"libmono-btls-shared.so"
-	.size	.L.autostr.16, 23
+	.asciz	"libxa-internal-api.so"
+	.size	.L.autostr.16, 22
 
 	.type	.L.autostr.17, @object
 .L.autostr.17:
-	.asciz	"libmonodroid.so"
-	.size	.L.autostr.17, 16
+	.asciz	"libmonosgen-2.0.so"
+	.size	.L.autostr.17, 19
 
 	.type	.L.autostr.18, @object
 .L.autostr.18:
-	.asciz	"libxa-internal-api.so"
-	.size	.L.autostr.18, 22
+	.asciz	"libmonodroid.so"
+	.size	.L.autostr.18, 16
 
 	.type	.L.autostr.19, @object
 .L.autostr.19:
-	.asciz	"libmonosgen-2.0.so"
-	.size	.L.autostr.19, 19
+	.asciz	"libmono-btls-shared.so"
+	.size	.L.autostr.19, 23
 
 	.type	.L.autostr.20, @object
 .L.autostr.20:
@@ -555,68 +553,58 @@ application_config:
 
 	.type	.L.autostr.21, @object
 .L.autostr.21:
-	.asciz	"libmono-btls-shared.so"
-	.size	.L.autostr.21, 23
+	.asciz	"libxa-internal-api.so"
+	.size	.L.autostr.21, 22
 
 	.type	.L.autostr.22, @object
 .L.autostr.22:
-	.asciz	"libmonodroid.so"
-	.size	.L.autostr.22, 16
+	.asciz	"libmono-native.so"
+	.size	.L.autostr.22, 18
 
 	.type	.L.autostr.23, @object
 .L.autostr.23:
-	.asciz	"libxa-internal-api.so"
-	.size	.L.autostr.23, 22
+	.asciz	"libmonodroid.so"
+	.size	.L.autostr.23, 16
 
 	.type	.L.autostr.24, @object
 .L.autostr.24:
-	.asciz	"libmono-native.so"
-	.size	.L.autostr.24, 18
+	.asciz	"libxa-internal-api.so"
+	.size	.L.autostr.24, 22
 
 	.type	.L.autostr.25, @object
 .L.autostr.25:
-	.asciz	"libmonodroid.so"
-	.size	.L.autostr.25, 16
+	.asciz	"libmono-btls-shared.so"
+	.size	.L.autostr.25, 23
 
 	.type	.L.autostr.26, @object
 .L.autostr.26:
-	.asciz	"libxa-internal-api.so"
-	.size	.L.autostr.26, 22
+	.asciz	"libmonosgen-2.0.so"
+	.size	.L.autostr.26, 19
 
 	.type	.L.autostr.27, @object
 .L.autostr.27:
-	.asciz	"libmono-btls-shared.so"
-	.size	.L.autostr.27, 23
+	.asciz	"libxa-internal-api.so"
+	.size	.L.autostr.27, 22
 
 	.type	.L.autostr.28, @object
 .L.autostr.28:
-	.asciz	"libmonosgen-2.0.so"
-	.size	.L.autostr.28, 19
+	.asciz	"libmono-native.so"
+	.size	.L.autostr.28, 18
 
 	.type	.L.autostr.29, @object
 .L.autostr.29:
-	.asciz	"libxa-internal-api.so"
-	.size	.L.autostr.29, 22
+	.asciz	"libmonosgen-2.0.so"
+	.size	.L.autostr.29, 19
 
 	.type	.L.autostr.30, @object
 .L.autostr.30:
-	.asciz	"libmono-native.so"
-	.size	.L.autostr.30, 18
+	.asciz	"libmonosgen-2.0.so"
+	.size	.L.autostr.30, 19
 
 	.type	.L.autostr.31, @object
 .L.autostr.31:
-	.asciz	"libmonosgen-2.0.so"
-	.size	.L.autostr.31, 19
-
-	.type	.L.autostr.32, @object
-.L.autostr.32:
-	.asciz	"libmonosgen-2.0.so"
-	.size	.L.autostr.32, 19
-
-	.type	.L.autostr.33, @object
-.L.autostr.33:
 	.asciz	"eu.mywebartist.lunchscheduler"
-	.size	.L.autostr.33, 30
+	.size	.L.autostr.31, 30
 
 
 	.ident	"Xamarin.Android remotes/origin/d17-2 @ bbba5a21f3b649a761b22d83959758b4d30df672"

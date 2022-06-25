@@ -631,7 +631,6 @@ D:\cs\LunchScheduler\LunchScheduler.Android\obj\Debug\120\res\drawable\sandwich.
 D:\cs\LunchScheduler\LunchScheduler.Android\obj\Debug\120\android\src\eu\mywebartist\lunchscheduler\R.java
 D:\cs\LunchScheduler\LunchScheduler.Android\obj\Debug\120\res\drawable\calendar.png
 D:\cs\LunchScheduler\LunchScheduler.Android\obj\Debug\120\android\assets\Newtonsoft.Json.dll
-D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\android\assets\Xamarin.Google.Android.Material.dll
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\bin\Debug\LunchScheduler.Android.dll
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\bin\Debug\LunchScheduler.Android.pdb
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\bin\Debug\eu.mywebartist.lunchscheduler.apk
@@ -864,6 +863,7 @@ D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\android\assets\Xamarin.Forms.Platform.dll
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\android\assets\Xamarin.Forms.Xaml.dll
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\android\assets\Xamarin.Forms.Xaml.pdb
+D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\android\assets\Xamarin.Google.Android.Material.dll
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\android\assets\Xamarin.Google.Android.Material.pdb
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\android\assets\Xamarin.Google.Guava.ListenableFuture.dll
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\android\typemaps.arm64-v8a.s

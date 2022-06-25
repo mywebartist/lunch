@@ -13,11 +13,9 @@
             <Label Text="Item Description"  ></Label>
             <Editor Placeholder="Enter item name" Text="{Binding description}" ></Editor>
 
-
             <Button Clicked="Button_Clicked" Margin="0,10,0,0"
                 BackgroundColor="DarkBlue" TextColor="White"
                     Text="Add Item" ></Button>
-            
 
         </StackLayout>
     </ContentPage.Content>

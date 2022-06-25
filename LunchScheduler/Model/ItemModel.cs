@@ -4,8 +4,10 @@ namespace LunchScheduler.Model
 {
     public class ItemModel
     {
+        public bool selected { get; set; }
         public int id { get; set; }
-
+        public int status_code { get; set; }
+        public string message { get; set; }
         public int organization_id { get; set; }
         public string name { get; set; }
         public string description { get; set; }

@@ -48,7 +48,8 @@ namespace LunchScheduler.Page
                     new MainMenuPageFlyoutMenuItem { Id = 4, Title = "View Orders(chef)" },
                     new MainMenuPageFlyoutMenuItem { Id = 5, Title = "Orgs list(anyone)" },
                     new MainMenuPageFlyoutMenuItem { Id = 6, Title = "Orgs Items(anyone)" },
-                    new MainMenuPageFlyoutMenuItem { Id = 7, Title = "Logout(anyone)" },
+                    new MainMenuPageFlyoutMenuItem { Id = 7, Title = "Add organization(anyone)" },
+                    new MainMenuPageFlyoutMenuItem { Id = 8, Title = "Logout(anyone)" },
                 });
 
 
