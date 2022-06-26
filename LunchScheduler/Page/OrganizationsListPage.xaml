@@ -5,31 +5,31 @@
     <ContentPage.Content>
         <StackLayout>
 
-
-
             <ListView 
                 x:Name="GroupedView"
                         SelectionMode="None"
-                ItemsSource="{Binding OrgsListData}" RowHeight="60"  SeparatorVisibility="Default" SeparatorColor="LightGray" >
+                ItemsSource="{Binding OrgsListData}" RowHeight="100"  SeparatorVisibility="Default" SeparatorColor="LightGray"  >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid ColumnDefinitions="*, Auto"  Padding="20,0"  >
+                            <Grid ColumnDefinitions="*, Auto"  Padding="20,0" Margin="5"  >
 
-                                <Label Padding="0,0,0,0" Grid.Column="0" Text="{Binding name}" VerticalTextAlignment="Center" TextColor="Black" >
+                                <Label Padding="0,0,0,0" Grid.Column="0" Text="{Binding name}"  VerticalTextAlignment="Start" TextColor="Black" >
                                 </Label>
-                                <Button Clicked="Button_ClickedAsync"  Grid.Column="1" ClassId="{Binding id}"  Text="Join"></Button>
-                                
+                                <Label Padding="0,20,0,0" Grid.Column="0"  Text="{Binding description}"  VerticalTextAlignment="Start" FontSize="Small" TextColor="Gray" >
+                                </Label>
+                                <Button Clicked="Button_ClickedAsync" Padding="0,0" Margin="0,20" FontSize="Small"  Grid.Column="1" ClassId="{Binding id}" BackgroundColor="DeepSkyBlue"  Text="Join"></Button>
+
 
                             </Grid>
+                            
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
 
             </ListView>
-            
-            
-            
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

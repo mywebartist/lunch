@@ -136,17 +136,9 @@ namespace LunchScheduler.Service
                     string responseStr = await result.Content.ReadAsStringAsync();
                     Debug.WriteLine("response: " + responseStr);
                     
-
-                    //buggg
                     var responseObj = await Task.Run(() =>
                     {
                         return JsonConvert.DeserializeObject<ItemsResponseModel>(responseStr);
-                      //  return JsonConvert.DeserializeObject<ItemsResponseModel>(responseStr, new JsonSerializerSettings()
-                       // {
-                       //     MissingMemberHandling = MissingMemberHandling.Ignore,
-                       //     NullValueHandling = NullValueHandling.Ignore,
-                     ////   });
-
                     });
                     return responseObj;
                 }
@@ -173,7 +165,7 @@ namespace LunchScheduler.Service
                 {
                     string responseStr = await result.Content.ReadAsStringAsync();
                     Debug.WriteLine("response: " + responseStr);
-                    //Console.WriteLine(responseStr);
+
                     var responseObj = await Task.Run(() =>
                     {
                         return JsonConvert.DeserializeObject<ChefOrderResponseModel>(responseStr);
@@ -207,7 +199,7 @@ namespace LunchScheduler.Service
                 {
                     string responseStr = await result.Content.ReadAsStringAsync();
                     Debug.WriteLine("response: " + responseStr);
-                    //Console.WriteLine(responseStr);
+
                     var responseObj = await Task.Run(() =>
                     {
                         return JsonConvert.DeserializeObject<PinResponseModel>(responseStr);
@@ -237,13 +229,15 @@ namespace LunchScheduler.Service
 
                 if (result != null && result.StatusCode == System.Net.HttpStatusCode.OK)
                 {
+
                     string responseStr = await result.Content.ReadAsStringAsync();
                     Debug.WriteLine("response: " + responseStr);
-                    //Console.WriteLine(responseStr);
+ 
                     var responseObj = await Task.Run(() =>
                     {
                         return JsonConvert.DeserializeObject<OrganizationsListResponseModel>(responseStr);
                     });
+
                     return responseObj;
 
                 }
@@ -268,7 +262,7 @@ namespace LunchScheduler.Service
                 {
                     string responseStr = await result.Content.ReadAsStringAsync();
                     Debug.WriteLine("response: " + responseStr);
-                    //Console.WriteLine(responseStr);
+  
                     var responseObj = await Task.Run(() =>
                     {
                         return JsonConvert.DeserializeObject<OrganizationItemsListResponseModel>(responseStr);
@@ -301,7 +295,6 @@ namespace LunchScheduler.Service
 
                 var payload = new StringContent(jObj.ToString(), Encoding.UTF8, "application/json");
                 var result = await _client.PostAsync(uri, payload);
-
 
                 if (result != null && result.StatusCode == System.Net.HttpStatusCode.OK)
                 {
@@ -340,7 +333,7 @@ namespace LunchScheduler.Service
                 {
                     string responseStr = await result.Content.ReadAsStringAsync();
                     Debug.WriteLine("response: " + responseStr);
-                    //Console.WriteLine(responseStr);
+
                     var responseObj = await Task.Run(() =>
                     {
                         return JsonConvert.DeserializeObject<UserModel>(responseStr);
@@ -370,7 +363,6 @@ namespace LunchScheduler.Service
 
                 JObject jObj = new JObject();
                 jObj.Add("default_org", default_org);
-                //jObj.Add("name", name);
 
                 StringContent content = new StringContent(jObj.ToString(), Encoding.UTF8, "application/json");
 
@@ -380,7 +372,7 @@ namespace LunchScheduler.Service
                 {
                     string responseStr = await result.Content.ReadAsStringAsync();
                     Debug.WriteLine("response: " + responseStr);
-                    //Console.WriteLine(responseStr);
+
                     var responseObj = await Task.Run(() =>
                     {
                         return JsonConvert.DeserializeObject<UserModel>(responseStr);
@@ -448,7 +440,6 @@ namespace LunchScheduler.Service
                 JObject jObj = new JObject();
                 jObj.Add("name", orgName);
                 jObj.Add("description", orgDescription);
-                //jObj.Add("organization_id", organization_id);
 
                 var payload = new StringContent(jObj.ToString(), Encoding.UTF8, "application/json");
                 var result = await _client.PostAsync(uri, payload);
@@ -490,7 +481,7 @@ namespace LunchScheduler.Service
                 {
                     string responseStr = await result.Content.ReadAsStringAsync();
                     Debug.WriteLine("response: " + responseStr);
-                    //Console.WriteLine(responseStr);
+
                     var responseObj = await Task.Run(() =>
                     {
                         return JsonConvert.DeserializeObject<OrganizationModel>(responseStr);

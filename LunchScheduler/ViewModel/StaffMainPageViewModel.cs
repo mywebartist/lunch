@@ -16,7 +16,7 @@ namespace LunchScheduler.ViewModel
             // no organizatin
             if (Settings.ActiveOrganizationId == "0")
             {
-                Message = "you dont have any organization. join or make new one.";
+                Message = "You dont have any organizations. Join or make new.";
             }
             else
             {
@@ -59,14 +59,12 @@ namespace LunchScheduler.ViewModel
                 }
                 else
                 {
-                    Message = (OrderData != null && OrderData.Count > 0) ? "" : "you dont have item selection in this org";
-                    // api is down
-                    App.Current.MainPage.DisplayAlert("alert", "system not working", "ok");
+                    Message = (OrderData != null && OrderData.Count > 0) ? "" : "There are no menu items selected";
                 }
             }
             catch (Exception e)
             {
-                // throw new Exception("Put your error message here.", e);
+                throw new Exception("Put your error message here.", e);
                 
             }
         }

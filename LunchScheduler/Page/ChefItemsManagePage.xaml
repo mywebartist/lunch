@@ -7,15 +7,15 @@
     <ContentPage.Content>
         <StackLayout Padding="20,20" >
 
-            <Label Text="Item name"  ></Label>
-            <Entry Placeholder="Enter item name" Text="{Binding itemName}" ></Entry>
+            <Label Text="Menu item name"  ></Label>
+            <Entry Placeholder="Name" Text="{Binding itemName}" ></Entry>
 
-            <Label Text="Item Description"  ></Label>
-            <Editor Placeholder="Enter item name" Text="{Binding description}" ></Editor>
+            <Label Text="Menu item description"  ></Label>
+            <Editor Placeholder="Description" Text="{Binding description}" ></Editor>
 
-            <Button Clicked="Button_Clicked" Margin="0,10,0,0"
-                BackgroundColor="DarkBlue" TextColor="White"
-                    Text="Add Item" ></Button>
+            <Button Clicked="Button_Clicked" Margin="40,0,40,0"
+                BackgroundColor="DeepSkyBlue" TextColor="White"
+                    Text="Add Menu Item"   ></Button>
 
         </StackLayout>
     </ContentPage.Content>

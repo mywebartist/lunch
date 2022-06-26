@@ -68,7 +68,12 @@ namespace LunchScheduler.Page
             else if (item.Id == 8)
             {
                page = new LoginPage();
-                
+
+            }
+            else
+            {
+                page = new MainMenuPageDetail();
+                page.Title = "My Lunch Menu";
             }
 
             page.Title = item.Title;

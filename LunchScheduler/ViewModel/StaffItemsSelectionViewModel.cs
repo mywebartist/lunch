@@ -10,6 +10,17 @@ namespace LunchScheduler.ViewModel
 {
     public class StaffItemsSelectionViewModel : BaseViewModel
     {
+        string message;
+        public string Message
+        {
+            get { return message; }
+            set
+            {
+                message = value;
+                OnPropertyChanged();
+            }
+        }
+
         public StaffItemsSelectionViewModel()
         {
             SelectedDate = DateTime.Now;
@@ -26,12 +37,14 @@ namespace LunchScheduler.ViewModel
                 var result = await web.getItemsApi(Convert.ToInt16(Settings.ActiveOrganizationId));
                 if (result != null)
                 {
+                    Debug.WriteLine("response: " + result.message);
                     if (result.status_code == 0)
                     {
-                        Debug.WriteLine("response: " + result.message);
+                        Message = "There are no menu items in this organization";
                     }
                     if (result.status_code == 1)
                     {
+                        Debug.WriteLine("response: " + result.message);
                         OrderSelectionData = new ObservableCollection<ItemModel>(result.data);
                     }
                    
@@ -39,7 +52,7 @@ namespace LunchScheduler.ViewModel
                 else
                 {
                     // api is down
-                    App.Current.MainPage.DisplayAlert("alert", "system not working", "ok");
+                    App.Current.MainPage.DisplayAlert("Message", "system not working", "ok");
                 }
             }
             catch (Exception e)

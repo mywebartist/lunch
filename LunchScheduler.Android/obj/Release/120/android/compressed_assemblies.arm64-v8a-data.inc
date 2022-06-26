@@ -12,7 +12,7 @@
 
 	.type	.L.compressed_assembly_data.3, @object
 	.local	.L.compressed_assembly_data.3
-	.comm	.L.compressed_assembly_data.3, 90624, 16
+	.comm	.L.compressed_assembly_data.3, 98304, 16
 
 	.type	.L.compressed_assembly_data.4, @object
 	.local	.L.compressed_assembly_data.4

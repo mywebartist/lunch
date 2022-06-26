@@ -5,19 +5,21 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="White">
 
+            <Label Text="{Binding Message}" Grid.Row="1" FontSize="16" Margin="20,0" TextColor="Gray" VerticalTextAlignment="Center"  HorizontalOptions="Center" ></Label>
+
             <ListView 
                 x:Name="GroupedView"
                    GroupDisplayBinding="{Binding Key}"
                    IsGroupingEnabled="true"
                         SelectionMode="None"
-                ItemsSource="{Binding OrderData}" RowHeight="60"  SeparatorVisibility="Default" SeparatorColor="LightGray" >
+                ItemsSource="{Binding OrderData}" RowHeight="60"  SeparatorVisibility="Default" SeparatorColor="Gray" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <Grid ColumnDefinitions="*, Auto"  Padding="20,0"  >
                                 <StackLayout VerticalOptions="CenterAndExpand" >
 
-                                    <Label  Grid.Column="0" Text="{Binding name}" TextColor="black" >
+                                    <Label  Grid.Column="0" Text="{Binding name}" TextColor="DeepSkyBlue" >
                                     </Label>
                                 </StackLayout>
 

@@ -8,21 +8,22 @@
             <ListView 
                 x:Name="GroupedView"
                         SelectionMode="None"
-                ItemsSource="{Binding OrgItemsListData}" RowHeight="60"  SeparatorVisibility="Default" SeparatorColor="LightGray" >
+                ItemsSource="{Binding OrgItemsListData}" RowHeight="100"  SeparatorVisibility="Default" SeparatorColor="LightGray" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <Grid ColumnDefinitions="*, Auto"  Padding="20,0" RowDefinitions="*,Auto"  >
 
-                                <Label Padding="0,0,0,0" Grid.Row="1" Grid.Column="0" Text="{Binding name}" VerticalTextAlignment="Center" TextColor="Black" >
+                                <Label Padding="0,0,0,0" Grid.Row="1" Grid.Column="0" Text="{Binding name}" VerticalTextAlignment="Start" TextColor="Black" >
                                 </Label>
+                                <Button Clicked="Button_ClickedAsync"  Grid.Row="1"  Grid.Column="1"   ClassId="{Binding id}"  Text="Edit"></Button>
 
-                                <Button Clicked="Button_ClickedAsync"  Grid.Column="1" ClassId="{Binding id}"  Text="Join"></Button>
 
-
-                                <Label Padding="0,0,0,0" Grid.Row="2"   Text="{Binding description}" VerticalTextAlignment="Center" TextColor="Black" >
+                                <Label Padding="0,0,0,0" Grid.Row="2"   Text="{Binding description}"
+                                      FontSize="Small" VerticalTextAlignment="Start" TextColor="Gray" >
                                 </Label>
                                 
+                         
                             </Grid>
  
                             

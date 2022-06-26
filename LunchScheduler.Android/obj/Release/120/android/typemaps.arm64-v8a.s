@@ -144,23 +144,12 @@ map_modules:
 	.zero	4
 	.xword	0x0	// java_map
 
-	.byte	0x69, 0x5, 0x45, 0x13, 0xba, 0xc6, 0x3b, 0x48, 0x91, 0xbb, 0x90, 0x2d, 0xfa, 0x62, 0x31, 0x36	// module_uuid: 13450569-c6ba-483b-91bb-902dfa623136
+	.byte	0x69, 0x8c, 0x8a, 0x2, 0x1a, 0xe5, 0xc0, 0x4b, 0xbe, 0xa8, 0x77, 0x8a, 0x4d, 0xd6, 0xeb, 0x83	// module_uuid: 028a8c69-e51a-4bc0-bea8-778a4dd6eb83
 	.word	0x1	// entry_count
 	.word	0x0	// duplicate_count
 	.xword	.L.module9_managed_to_java	// map
 	.xword	0	// duplicate_map
-	.xword	map_aname.9	// assembly_name: LunchScheduler.Android
-	.xword	0x0	// image
-	.word	0x0	// java_name_width
-	.zero	4
-	.xword	0x0	// java_map
-
-	.byte	0x69, 0x8c, 0x8a, 0x2, 0x1a, 0xe5, 0xc0, 0x4b, 0xbe, 0xa8, 0x77, 0x8a, 0x4d, 0xd6, 0xeb, 0x83	// module_uuid: 028a8c69-e51a-4bc0-bea8-778a4dd6eb83
-	.word	0x1	// entry_count
-	.word	0x0	// duplicate_count
-	.xword	.L.module10_managed_to_java	// map
-	.xword	0	// duplicate_map
-	.xword	map_aname.10	// assembly_name: Xamarin.Essentials
+	.xword	map_aname.9	// assembly_name: Xamarin.Essentials
 	.xword	0x0	// image
 	.word	0x0	// java_name_width
 	.zero	4
@@ -169,9 +158,9 @@ map_modules:
 	.byte	0x7d, 0xa, 0x95, 0x12, 0x77, 0xee, 0x74, 0x4c, 0x8f, 0xf2, 0xa8, 0x6c, 0x7e, 0x61, 0x21, 0xfc	// module_uuid: 12950a7d-ee77-4c74-8ff2-a86c7e6121fc
 	.word	0x2	// entry_count
 	.word	0x2	// duplicate_count
-	.xword	.L.module11_managed_to_java	// map
-	.xword	.L.module11_managed_to_java_duplicates	// duplicate_map
-	.xword	map_aname.11	// assembly_name: Xamarin.AndroidX.Lifecycle.LiveData.Core
+	.xword	.L.module10_managed_to_java	// map
+	.xword	.L.module10_managed_to_java_duplicates	// duplicate_map
+	.xword	map_aname.10	// assembly_name: Xamarin.AndroidX.Lifecycle.LiveData.Core
 	.xword	0x0	// image
 	.word	0x0	// java_name_width
 	.zero	4
@@ -180,9 +169,9 @@ map_modules:
 	.byte	0x8a, 0xb, 0x73, 0x97, 0x93, 0x11, 0x72, 0x45, 0x9d, 0x38, 0x49, 0xfe, 0x19, 0x8, 0x3e, 0xce	// module_uuid: 97730b8a-1193-4572-9d38-49fe19083ece
 	.word	0x1	// entry_count
 	.word	0x0	// duplicate_count
-	.xword	.L.module12_managed_to_java	// map
+	.xword	.L.module11_managed_to_java	// map
 	.xword	0	// duplicate_map
-	.xword	map_aname.12	// assembly_name: Xamarin.AndroidX.Legacy.Support.Core.UI
+	.xword	map_aname.11	// assembly_name: Xamarin.AndroidX.Legacy.Support.Core.UI
 	.xword	0x0	// image
 	.word	0x0	// java_name_width
 	.zero	4
@@ -191,9 +180,9 @@ map_modules:
 	.byte	0x8b, 0x5a, 0x26, 0x99, 0x48, 0xe4, 0x1a, 0x46, 0xb9, 0x6c, 0x14, 0xb7, 0x3b, 0xc7, 0xd3, 0x43	// module_uuid: 99265a8b-e448-461a-b96c-14b73bc7d343
 	.word	0x3	// entry_count
 	.word	0x2	// duplicate_count
-	.xword	.L.module13_managed_to_java	// map
-	.xword	.L.module13_managed_to_java_duplicates	// duplicate_map
-	.xword	map_aname.13	// assembly_name: Xamarin.AndroidX.SavedState
+	.xword	.L.module12_managed_to_java	// map
+	.xword	.L.module12_managed_to_java_duplicates	// duplicate_map
+	.xword	map_aname.12	// assembly_name: Xamarin.AndroidX.SavedState
 	.xword	0x0	// image
 	.word	0x0	// java_name_width
 	.zero	4
@@ -202,9 +191,9 @@ map_modules:
 	.byte	0xa6, 0x28, 0xf4, 0xe9, 0xba, 0xb0, 0x6, 0x4b, 0xb1, 0x1, 0xc, 0x60, 0xa0, 0xdd, 0x9e, 0xd1	// module_uuid: e9f428a6-b0ba-4b06-b101-0c60a0dd9ed1
 	.word	0x23	// entry_count
 	.word	0xe	// duplicate_count
-	.xword	.L.module14_managed_to_java	// map
-	.xword	.L.module14_managed_to_java_duplicates	// duplicate_map
-	.xword	map_aname.14	// assembly_name: Xamarin.Google.Android.Material
+	.xword	.L.module13_managed_to_java	// map
+	.xword	.L.module13_managed_to_java_duplicates	// duplicate_map
+	.xword	map_aname.13	// assembly_name: Xamarin.Google.Android.Material
 	.xword	0x0	// image
 	.word	0x0	// java_name_width
 	.zero	4
@@ -213,9 +202,9 @@ map_modules:
 	.byte	0xab, 0xff, 0x0, 0x34, 0xee, 0x1b, 0x3, 0x40, 0x8c, 0x91, 0xee, 0x8e, 0x71, 0xfa, 0x17, 0xc5	// module_uuid: 3400ffab-1bee-4003-8c91-ee8e71fa17c5
 	.word	0x4	// entry_count
 	.word	0x1	// duplicate_count
-	.xword	.L.module15_managed_to_java	// map
-	.xword	.L.module15_managed_to_java_duplicates	// duplicate_map
-	.xword	map_aname.15	// assembly_name: Xamarin.AndroidX.DrawerLayout
+	.xword	.L.module14_managed_to_java	// map
+	.xword	.L.module14_managed_to_java_duplicates	// duplicate_map
+	.xword	map_aname.14	// assembly_name: Xamarin.AndroidX.DrawerLayout
 	.xword	0x0	// image
 	.word	0x0	// java_name_width
 	.zero	4
@@ -224,9 +213,20 @@ map_modules:
 	.byte	0xac, 0x81, 0x5e, 0x70, 0xf5, 0x7e, 0x3f, 0x41, 0x89, 0x7c, 0x3b, 0x7, 0x98, 0xc4, 0x9b, 0x31	// module_uuid: 705e81ac-7ef5-413f-897c-3b0798c49b31
 	.word	0x2c	// entry_count
 	.word	0x17	// duplicate_count
+	.xword	.L.module15_managed_to_java	// map
+	.xword	.L.module15_managed_to_java_duplicates	// duplicate_map
+	.xword	map_aname.15	// assembly_name: Xamarin.AndroidX.RecyclerView
+	.xword	0x0	// image
+	.word	0x0	// java_name_width
+	.zero	4
+	.xword	0x0	// java_map
+
+	.byte	0xbd, 0xab, 0x51, 0xdf, 0x4d, 0x76, 0xc9, 0x4b, 0xaa, 0xa0, 0xca, 0xa9, 0xc6, 0x93, 0x2b, 0x5	// module_uuid: df51abbd-764d-4bc9-aaa0-caa9c6932b05
+	.word	0x1	// entry_count
+	.word	0x0	// duplicate_count
 	.xword	.L.module16_managed_to_java	// map
-	.xword	.L.module16_managed_to_java_duplicates	// duplicate_map
-	.xword	map_aname.16	// assembly_name: Xamarin.AndroidX.RecyclerView
+	.xword	0	// duplicate_map
+	.xword	map_aname.16	// assembly_name: LunchScheduler.Android
 	.xword	0x0	// image
 	.word	0x0	// java_name_width
 	.zero	4
@@ -3175,19 +3175,19 @@ map_java:
 	.zero	66	// byteCount == 35; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xf	// module_index
+	.word	0xe	// module_index
 	.word	0x2000016	// type_token_id
 	.ascii	"androidx/drawerlayout/widget/DrawerLayout"	// java_name
 	.zero	60	// byteCount == 41; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xf	// module_index
+	.word	0xe	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"androidx/drawerlayout/widget/DrawerLayout$DrawerListener"	// java_name
 	.zero	45	// byteCount == 56; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xf	// module_index
+	.word	0xe	// module_index
 	.word	0x200001e	// type_token_id
 	.ascii	"androidx/drawerlayout/widget/DrawerLayout$LayoutParams"	// java_name
 	.zero	47	// byteCount == 54; fixedWidth == 101; returned size == 101
@@ -3271,7 +3271,7 @@ map_java:
 	.zero	60	// byteCount == 41; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xc	// module_index
+	.word	0xb	// module_index
 	.word	0x2000009	// type_token_id
 	.ascii	"androidx/legacy/app/ActionBarDrawerToggle"	// java_name
 	.zero	60	// byteCount == 41; fixedWidth == 101; returned size == 101
@@ -3307,13 +3307,13 @@ map_java:
 	.zero	68	// byteCount == 33; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xb	// module_index
+	.word	0xa	// module_index
 	.word	0x2000009	// type_token_id
 	.ascii	"androidx/lifecycle/LiveData"	// java_name
 	.zero	74	// byteCount == 27; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xb	// module_index
+	.word	0xa	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"androidx/lifecycle/Observer"	// java_name
 	.zero	74	// byteCount == 27; fixedWidth == 101; returned size == 101
@@ -3373,265 +3373,265 @@ map_java:
 	.zero	48	// byteCount == 53; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x200004b	// type_token_id
 	.ascii	"androidx/recyclerview/widget/GridLayoutManager"	// java_name
 	.zero	55	// byteCount == 46; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x200004c	// type_token_id
 	.ascii	"androidx/recyclerview/widget/GridLayoutManager$LayoutParams"	// java_name
 	.zero	42	// byteCount == 59; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x200004d	// type_token_id
 	.ascii	"androidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup"	// java_name
 	.zero	40	// byteCount == 61; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x2000051	// type_token_id
 	.ascii	"androidx/recyclerview/widget/ItemTouchHelper"	// java_name
 	.zero	57	// byteCount == 44; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x2000052	// type_token_id
 	.ascii	"androidx/recyclerview/widget/ItemTouchHelper$Callback"	// java_name
 	.zero	48	// byteCount == 53; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"androidx/recyclerview/widget/ItemTouchHelper$ViewDropHandler"	// java_name
 	.zero	41	// byteCount == 60; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"androidx/recyclerview/widget/ItemTouchUIUtil"	// java_name
 	.zero	57	// byteCount == 44; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x2000056	// type_token_id
 	.ascii	"androidx/recyclerview/widget/LinearLayoutManager"	// java_name
 	.zero	53	// byteCount == 48; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x2000057	// type_token_id
 	.ascii	"androidx/recyclerview/widget/LinearSmoothScroller"	// java_name
 	.zero	52	// byteCount == 49; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x2000058	// type_token_id
 	.ascii	"androidx/recyclerview/widget/LinearSnapHelper"	// java_name
 	.zero	56	// byteCount == 45; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x2000059	// type_token_id
 	.ascii	"androidx/recyclerview/widget/OrientationHelper"	// java_name
 	.zero	55	// byteCount == 46; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x200005b	// type_token_id
 	.ascii	"androidx/recyclerview/widget/PagerSnapHelper"	// java_name
 	.zero	57	// byteCount == 44; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x200005c	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView"	// java_name
 	.zero	60	// byteCount == 41; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x200005d	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$Adapter"	// java_name
 	.zero	52	// byteCount == 49; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x200005e	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$Adapter$StateRestorationPolicy"	// java_name
 	.zero	29	// byteCount == 72; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x2000060	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$AdapterDataObserver"	// java_name
 	.zero	40	// byteCount == 61; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$ChildDrawingOrderCallback"	// java_name
 	.zero	34	// byteCount == 67; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x2000064	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$EdgeEffectFactory"	// java_name
 	.zero	42	// byteCount == 59; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x2000065	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$ItemAnimator"	// java_name
 	.zero	47	// byteCount == 54; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemAnimatorFinishedListener"	// java_name
 	.zero	18	// byteCount == 83; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x2000068	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemHolderInfo"	// java_name
 	.zero	32	// byteCount == 69; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x200006a	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$ItemDecoration"	// java_name
 	.zero	45	// byteCount == 56; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x200006c	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$LayoutManager"	// java_name
 	.zero	46	// byteCount == 55; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$LayoutManager$LayoutPrefetchRegistry"	// java_name
 	.zero	23	// byteCount == 78; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x200006f	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$LayoutManager$Properties"	// java_name
 	.zero	35	// byteCount == 66; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x2000071	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$LayoutParams"	// java_name
 	.zero	47	// byteCount == 54; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$OnChildAttachStateChangeListener"	// java_name
 	.zero	27	// byteCount == 74; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x2000077	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$OnFlingListener"	// java_name
 	.zero	44	// byteCount == 57; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$OnItemTouchListener"	// java_name
 	.zero	40	// byteCount == 61; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x200007f	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$OnScrollListener"	// java_name
 	.zero	43	// byteCount == 58; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x2000081	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$RecycledViewPool"	// java_name
 	.zero	43	// byteCount == 58; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x2000082	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$Recycler"	// java_name
 	.zero	51	// byteCount == 50; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$RecyclerListener"	// java_name
 	.zero	43	// byteCount == 58; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x2000087	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$SmoothScroller"	// java_name
 	.zero	45	// byteCount == 56; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x2000088	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$SmoothScroller$Action"	// java_name
 	.zero	38	// byteCount == 63; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$SmoothScroller$ScrollVectorProvider"	// java_name
 	.zero	24	// byteCount == 77; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x200008c	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$State"	// java_name
 	.zero	54	// byteCount == 47; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x200008d	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$ViewCacheExtension"	// java_name
 	.zero	41	// byteCount == 60; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x200008f	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerView$ViewHolder"	// java_name
 	.zero	49	// byteCount == 52; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x200009d	// type_token_id
 	.ascii	"androidx/recyclerview/widget/RecyclerViewAccessibilityDelegate"	// java_name
 	.zero	39	// byteCount == 62; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x200009e	// type_token_id
 	.ascii	"androidx/recyclerview/widget/SnapHelper"	// java_name
 	.zero	62	// byteCount == 39; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xd	// module_index
+	.word	0xc	// module_index
 	.word	0x2000005	// type_token_id
 	.ascii	"androidx/savedstate/SavedStateRegistry"	// java_name
 	.zero	63	// byteCount == 38; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xd	// module_index
+	.word	0xc	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"androidx/savedstate/SavedStateRegistry$SavedStateProvider"	// java_name
 	.zero	44	// byteCount == 57; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xd	// module_index
+	.word	0xc	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"androidx/savedstate/SavedStateRegistryOwner"	// java_name
 	.zero	58	// byteCount == 43; fixedWidth == 101; returned size == 101
@@ -3685,187 +3685,187 @@ map_java:
 	.zero	50	// byteCount == 51; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x2000061	// type_token_id
 	.ascii	"com/google/android/material/appbar/AppBarLayout"	// java_name
 	.zero	54	// byteCount == 47; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x2000062	// type_token_id
 	.ascii	"com/google/android/material/appbar/AppBarLayout$LayoutParams"	// java_name
 	.zero	41	// byteCount == 60; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"com/google/android/material/appbar/AppBarLayout$OnOffsetChangedListener"	// java_name
 	.zero	30	// byteCount == 71; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x2000067	// type_token_id
 	.ascii	"com/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior"	// java_name
 	.zero	32	// byteCount == 69; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x200006a	// type_token_id
 	.ascii	"com/google/android/material/appbar/HeaderScrollingViewBehavior"	// java_name
 	.zero	39	// byteCount == 62; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x200006c	// type_token_id
 	.ascii	"com/google/android/material/appbar/ViewOffsetBehavior"	// java_name
 	.zero	48	// byteCount == 53; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x2000031	// type_token_id
 	.ascii	"com/google/android/material/badge/BadgeDrawable"	// java_name
 	.zero	54	// byteCount == 47; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x2000032	// type_token_id
 	.ascii	"com/google/android/material/badge/BadgeDrawable$SavedState"	// java_name
 	.zero	43	// byteCount == 58; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x200005a	// type_token_id
 	.ascii	"com/google/android/material/bottomnavigation/BottomNavigationItemView"	// java_name
 	.zero	32	// byteCount == 69; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x200005b	// type_token_id
 	.ascii	"com/google/android/material/bottomnavigation/BottomNavigationMenuView"	// java_name
 	.zero	32	// byteCount == 69; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x200005c	// type_token_id
 	.ascii	"com/google/android/material/bottomnavigation/BottomNavigationView"	// java_name
 	.zero	36	// byteCount == 65; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"com/google/android/material/bottomnavigation/BottomNavigationView$OnNavigationItemReselectedListener"	// java_name
 	.zero	1	// byteCount == 100; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"com/google/android/material/bottomnavigation/BottomNavigationView$OnNavigationItemSelectedListener"	// java_name
 	.zero	3	// byteCount == 98; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x200002d	// type_token_id
 	.ascii	"com/google/android/material/bottomsheet/BottomSheetBehavior"	// java_name
 	.zero	42	// byteCount == 59; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x200002e	// type_token_id
 	.ascii	"com/google/android/material/bottomsheet/BottomSheetBehavior$BottomSheetCallback"	// java_name
 	.zero	22	// byteCount == 79; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x2000030	// type_token_id
 	.ascii	"com/google/android/material/bottomsheet/BottomSheetDialog"	// java_name
 	.zero	44	// byteCount == 57; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x2000057	// type_token_id
 	.ascii	"com/google/android/material/internal/TextDrawableHelper"	// java_name
 	.zero	46	// byteCount == 55; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"com/google/android/material/internal/TextDrawableHelper$TextDrawableDelegate"	// java_name
 	.zero	25	// byteCount == 76; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x2000040	// type_token_id
 	.ascii	"com/google/android/material/navigation/NavigationBarItemView"	// java_name
 	.zero	41	// byteCount == 60; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x2000042	// type_token_id
 	.ascii	"com/google/android/material/navigation/NavigationBarMenuView"	// java_name
 	.zero	41	// byteCount == 60; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x2000044	// type_token_id
 	.ascii	"com/google/android/material/navigation/NavigationBarPresenter"	// java_name
 	.zero	40	// byteCount == 61; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x2000033	// type_token_id
 	.ascii	"com/google/android/material/navigation/NavigationBarView"	// java_name
 	.zero	45	// byteCount == 56; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"com/google/android/material/navigation/NavigationBarView$OnItemReselectedListener"	// java_name
 	.zero	20	// byteCount == 81; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"com/google/android/material/navigation/NavigationBarView$OnItemSelectedListener"	// java_name
 	.zero	22	// byteCount == 79; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x200002a	// type_token_id
 	.ascii	"com/google/android/material/resources/TextAppearance"	// java_name
 	.zero	49	// byteCount == 52; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x200002b	// type_token_id
 	.ascii	"com/google/android/material/resources/TextAppearanceFontCallback"	// java_name
 	.zero	37	// byteCount == 64; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x2000046	// type_token_id
 	.ascii	"com/google/android/material/tabs/TabLayout"	// java_name
 	.zero	59	// byteCount == 42; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"com/google/android/material/tabs/TabLayout$BaseOnTabSelectedListener"	// java_name
 	.zero	33	// byteCount == 68; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x0	// type_token_id
 	.ascii	"com/google/android/material/tabs/TabLayout$OnTabSelectedListener"	// java_name
 	.zero	37	// byteCount == 64; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x2000050	// type_token_id
 	.ascii	"com/google/android/material/tabs/TabLayout$Tab"	// java_name
 	.zero	55	// byteCount == 46; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x2000047	// type_token_id
 	.ascii	"com/google/android/material/tabs/TabLayout$TabView"	// java_name
 	.zero	51	// byteCount == 50; fixedWidth == 101; returned size == 101
@@ -5155,13 +5155,13 @@ map_java:
 	.zero	65	// byteCount == 36; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xa	// module_index
+	.word	0x9	// module_index
 	.word	0x2000010	// type_token_id
 	.ascii	"crc64a0e0a82d0db9a07d/ActivityLifecycleContextListener"	// java_name
 	.zero	47	// byteCount == 54; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x9	// module_index
+	.word	0x10	// module_index
 	.word	0x2000002	// type_token_id
 	.ascii	"crc64cc8cace90056913b/MainActivity"	// java_name
 	.zero	67	// byteCount == 34; fixedWidth == 101; returned size == 101
@@ -6187,7 +6187,7 @@ map_java:
 	.zero	25	// byteCount == 76; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xf	// module_index
+	.word	0xe	// module_index
 	.word	0x200001d	// type_token_id
 	.ascii	"mono/androidx/drawerlayout/widget/DrawerLayout_DrawerListenerImplementor"	// java_name
 	.zero	29	// byteCount == 72; fixedWidth == 101; returned size == 101
@@ -6205,19 +6205,19 @@ map_java:
 	.zero	39	// byteCount == 62; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x2000076	// type_token_id
 	.ascii	"mono/androidx/recyclerview/widget/RecyclerView_OnChildAttachStateChangeListenerImplementor"	// java_name
 	.zero	11	// byteCount == 90; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x200007e	// type_token_id
 	.ascii	"mono/androidx/recyclerview/widget/RecyclerView_OnItemTouchListenerImplementor"	// java_name
 	.zero	24	// byteCount == 77; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0x10	// module_index
+	.word	0xf	// module_index
 	.word	0x2000086	// type_token_id
 	.ascii	"mono/androidx/recyclerview/widget/RecyclerView_RecyclerListenerImplementor"	// java_name
 	.zero	27	// byteCount == 74; fixedWidth == 101; returned size == 101
@@ -6241,25 +6241,25 @@ map_java:
 	.zero	29	// byteCount == 72; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x2000066	// type_token_id
 	.ascii	"mono/com/google/android/material/appbar/AppBarLayout_OnOffsetChangedListenerImplementor"	// java_name
 	.zero	14	// byteCount == 87; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x2000038	// type_token_id
 	.ascii	"mono/com/google/android/material/navigation/NavigationBarView_OnItemReselectedListenerImplementor"	// java_name
 	.zero	4	// byteCount == 97; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x200003b	// type_token_id
 	.ascii	"mono/com/google/android/material/navigation/NavigationBarView_OnItemSelectedListenerImplementor"	// java_name
 	.zero	6	// byteCount == 95; fixedWidth == 101; returned size == 101
 	.zero	3
 
-	.word	0xe	// module_index
+	.word	0xd	// module_index
 	.word	0x200004d	// type_token_id
 	.ascii	"mono/com/google/android/material/tabs/TabLayout_BaseOnTabSelectedListenerImplementor"	// java_name
 	.zero	17	// byteCount == 84; fixedWidth == 101; returned size == 101

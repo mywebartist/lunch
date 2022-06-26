@@ -26,3 +26,4 @@ D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Release\netstandard2.0\Page\ProfilePage.xaml.g.cs
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Release\netstandard2.0\Page\RoleManagePage.xaml.g.cs
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Release\netstandard2.0\Page\StaffItemsSelectionPage.xaml.g.cs
+D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Release\netstandard2.0\Page\AddNewOrgPage.xaml.g.cs

@@ -41,19 +41,19 @@ namespace LunchScheduler.Page
             {
                 MenuItems = new ObservableCollection<MainMenuPageFlyoutMenuItem>(new[]
                 {
-                    new MainMenuPageFlyoutMenuItem { Id = 0, Title = "Home"  },
-                    new MainMenuPageFlyoutMenuItem { Id = 1, Title = "Profile(user)" },
-                    new MainMenuPageFlyoutMenuItem { Id = 2, Title = "Item Selection(staff)" },
-                    new MainMenuPageFlyoutMenuItem { Id = 3, Title = "Manage Items(chef)" },
-                    new MainMenuPageFlyoutMenuItem { Id = 4, Title = "View Orders(chef)" },
-                    new MainMenuPageFlyoutMenuItem { Id = 5, Title = "Orgs list(anyone)" },
-                    new MainMenuPageFlyoutMenuItem { Id = 6, Title = "Orgs Items(anyone)" },
-                    new MainMenuPageFlyoutMenuItem { Id = 7, Title = "Add organization(anyone)" },
-                    new MainMenuPageFlyoutMenuItem { Id = 8, Title = "Logout(anyone)" },
+                    new MainMenuPageFlyoutMenuItem { Id = 0, Title = "My Lunch Menu"  },
+                    new MainMenuPageFlyoutMenuItem { Id = 2, Title = "Select Lunch Menu" },
+                    new MainMenuPageFlyoutMenuItem { Id = 100, Title = "-----" },
+                    new MainMenuPageFlyoutMenuItem { Id = 4, Title = "View Orders" },
+                    new MainMenuPageFlyoutMenuItem { Id = 3, Title = "Add New Menu Item" },
+                    new MainMenuPageFlyoutMenuItem { Id = 6, Title = "Edit Menu Item" },
+                    new MainMenuPageFlyoutMenuItem { Id = 100, Title = "-----" },
+                    new MainMenuPageFlyoutMenuItem { Id = 5, Title = "Organizations List" },
+                    new MainMenuPageFlyoutMenuItem { Id = 7, Title = "Add New Organization" },
+                     new MainMenuPageFlyoutMenuItem { Id = 100, Title = "-----" },
+                    new MainMenuPageFlyoutMenuItem { Id = 1, Title = "Profile" },
+                    new MainMenuPageFlyoutMenuItem { Id = 8, Title = "Logout" },
                 });
-
-
-
             }
 
             #region INotifyPropertyChanged Implementation

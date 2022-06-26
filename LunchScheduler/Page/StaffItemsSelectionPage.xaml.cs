@@ -32,22 +32,13 @@ namespace LunchScheduler
             var result = await web.addUserItemsSelectionApi(Convert.ToInt16(Settings.ActiveOrganizationId), selected_id.ToArray(), viewModel.SelectedDate.ToString("yyyy-MM-dd"));
             if (result != null)
             {
-
-
-                if (result.status_code == 0)
-                {
-                    await DisplayAlert("alert", result.message, "ok");
-                }
-                else
-                {
-
-                }
+                 await DisplayAlert("Message", result.message, "ok");
 
             }
             else
             {
                 // api is down
-                await DisplayAlert("alert", "backend system not working", "ok");
+                await DisplayAlert("Message", "backend system not working", "ok");
             }
         }
     }

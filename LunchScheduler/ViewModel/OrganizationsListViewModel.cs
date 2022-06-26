@@ -21,14 +21,12 @@ namespace LunchScheduler.ViewModel
                 _orgsList = value;
                 OnPropertyChanged();
             }
-
         }
         public async void getOrganizationsList()
         {
             try
             {
                 var web = new AccountService();
-
 
                 var result = await web.getOrganizationsListApi();
                 if (result != null)
@@ -39,7 +37,7 @@ namespace LunchScheduler.ViewModel
                 else
                 {
                     // api is down
-                    App.Current.MainPage.DisplayAlert("alert", "system not working", "ok");
+                    App.Current.MainPage.DisplayAlert("Message", "no organization selected", "ok");
                 }
             }
             catch (Exception e)

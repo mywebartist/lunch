@@ -5,30 +5,29 @@
 
     <ContentPage.Content>
         <StackLayout Padding="20,20,20,0" Spacing="0" >
-            <Label Text="Name:" FontSize="12" TextColor="LightGray"   />
+            <Label Text="Name:" FontSize="12" TextColor="Gray"   />
             <Label Text="{Binding Name}" FontSize="16" FontAttributes="Bold"   />
 
-            <Label Text="Email:" FontSize="12" Margin="0,10,0,0" TextColor="LightGray"  />
+
+            <Label Text="Email:" FontSize="12" Margin="0,10,0,0" TextColor="Gray"  />
             <Label Text="{Binding Email}" FontSize="16" FontAttributes="Bold"  />
 
-            <Label Text="Organization:" FontSize="12" Margin="0,10,0,0" TextColor="LightGray"  />
+            <Label Text="Organizations:" FontSize="12" Margin="0,10,0,0" TextColor="Gray"  />
             <Label Text="{Binding Organization}" FontSize="16" FontAttributes="Bold"  />
 
-            
-            
 
             <ListView 
                 x:Name="GroupedView"
                         SelectionMode="None"
-                ItemsSource="{Binding OrgsListData}" RowHeight="60"  SeparatorVisibility="Default" SeparatorColor="LightGray" >
+                ItemsSource="{Binding OrgsListData}" RowHeight="60"  SeparatorVisibility="Default" SeparatorColor="Gray" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid ColumnDefinitions="*, Auto"  Padding="20,0"  >
+                            <Grid ColumnDefinitions="*, Auto"  Padding="0,0"  Margin="5"  >
 
                                 <Label Padding="0,0,0,0" Grid.Column="0" Text="{Binding organization_with_id}" VerticalTextAlignment="Center" TextColor="Black" >
                                 </Label>
-                                <Button Clicked="ActivateButton_Clicked" BackgroundColor="{Binding activate_color}"  Grid.Column="1" ClassId="{Binding id}"  Text="Activate"></Button>
+                                <Button Clicked="ActivateButton_Clicked" BackgroundColor="{Binding activate_color}"  Grid.Column="1" ClassId="{Binding id}"  Text="{Binding activated_text}"></Button>
 
                             </Grid>
                         </ViewCell>
@@ -37,8 +36,6 @@
 
             </ListView>
             
-
-
 
         </StackLayout>
     </ContentPage.Content>

@@ -31,14 +31,13 @@ namespace LunchScheduler.Page
             if (result != null)
             {
 
-                await DisplayAlert("alert", result.message, "ok");
-
+                await DisplayAlert("Message", result.message, "ok");
 
             }
             else
             {
                 // api is down
-                await DisplayAlert("alert", "backend system not working", "ok");
+                await DisplayAlert("Message", "backend system not working", "ok");
             }
 
 

@@ -24,26 +24,12 @@ namespace LunchScheduler.Page
             var result = await web.UserJoinOrgApi(organization_id);
             if (result != null)
             {
-                await DisplayAlert("alert", result.message, "ok");
-
-                if (result.status_code == 0)
-                {
-                    await DisplayAlert("alert", result.message, "ok");
-                }
-                else
-                {
-                    // save user token
-                    //Settings.CurrentUser = result.user;
-
-                    // login ok
-                    // App.Current.MainPage.Navigation.PushAsync(new PinPage());
-                }
-
+                await DisplayAlert("Message", result.message, "ok");
             }
             else
             {
                 // api is down
-               await DisplayAlert("alert", "backend system not working", "ok");
+               await DisplayAlert("Message", "backend system not working", "ok");
             }
 
 

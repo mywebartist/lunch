@@ -27,14 +27,15 @@ namespace LunchScheduler
             if (result != null)
             {
 
-                await DisplayAlert("alert", result.message, "ok");
-
+                await DisplayAlert("Message", result.message, "ok");
+                viewModel.itemName = "";
+                viewModel.description = "";
 
             }
             else
             {
                 // api is down
-                await DisplayAlert("alert", "backend system not working", "ok");
+                await DisplayAlert("Message", "backend system not working", "ok");
             }
 
 

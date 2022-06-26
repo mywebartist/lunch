@@ -11,6 +11,17 @@ namespace LunchScheduler.ViewModel
 {
     public class ChefOrdersViewModel : BaseViewModel
     {
+        string message;
+        public string Message
+        {
+            get { return message; }
+            set
+            {
+                message = value;
+                OnPropertyChanged();
+            }
+        }
+
         public ChefOrdersViewModel()
         {
             getOrderItems();
@@ -33,16 +44,25 @@ namespace LunchScheduler.ViewModel
                 var web = new AccountService();
 
                 var result = await web.getOrdersApi(Convert.ToInt16(Settings.ActiveOrganizationId));
-                if (result != null && result.orders != null && result.orders.Count > 0)
+                if (result != null )
                 {
+                    if (result.orders != null && result.orders.Count > 0)
+                    {
+                        var groupList = result.orders.GroupBy(x => x.user_order_title.ToString()).ToList();
+                        OrderData = new ObservableCollection<IGrouping<string, ItemModel>>(groupList);
+                    }
+                    else
+                    {
+                        Message = "There are no orders for his organization";
+                        //App.Current.MainPage.DisplayAlert("Message", result.message, "ok");
+                    }
 
-                    var groupList = result.orders.GroupBy(x => x.user_order_title.ToString()).ToList();
-                    OrderData = new ObservableCollection<IGrouping<string, ItemModel>>(groupList);
+                   
                 }
                 else
                 {
                     // api is down
-                  // App.Current.MainPage.DisplayAlert("alert", "system not working", "ok");
+                  App.Current.MainPage.DisplayAlert("Message", "system not working", "ok");
                 }
             }
             catch (Exception e)

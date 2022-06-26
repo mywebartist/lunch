@@ -29,14 +29,6 @@ namespace LunchScheduler
         private async void Button_Clicked(object sender, EventArgs e)
         {
 
-            // if ( string.IsNullOrEmpty( viewModel.Email ) )
-            //  {
-            //     DisplayAlert("alert", "enter email", "ok");
-            //     return;
-            //  }
-
-
-
             var web = new AccountService();
             var result = await web.getAccessToken(viewModel.Pin);
             if (result != null)
@@ -45,7 +37,7 @@ namespace LunchScheduler
 
                 if (result.status_code == 0)
                 {
-                    await DisplayAlert("alert", result.message, "ok");
+                    await DisplayAlert("Message", result.message, "ok");
                 }
                 else
                 {
@@ -58,7 +50,7 @@ namespace LunchScheduler
 
                     if (Settings.ActiveOrganizationId == "0")
                     {
-                        Settings.ActiveOrganizationName = "";
+                        Settings.ActiveOrganizationName = "no organization selected";
                     }
 
                     Settings.UserEmail = result.user.email;
@@ -72,7 +64,7 @@ namespace LunchScheduler
             else
             {
                 // api is down
-                await DisplayAlert("alert", "backend system not working", "ok");
+                await DisplayAlert("Message", "backend system not working", "ok");
             }
 
 
