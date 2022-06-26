@@ -33,13 +33,21 @@ namespace LunchScheduler.ViewModel
                 var result = await web.getOrganizationsItemsListApi();
                 if (result != null)
                 {
+                    if(result.status_code == 1 && result.data.Count > 0 )
+                    {
+                        OrgItemsListData = new ObservableCollection<ItemModel>(result.data);
+                    }
+                    else
+                    {
+                        App.Current.MainPage.DisplayAlert("Message", result.message, "ok");
+                    }
 
-                    OrgItemsListData = new ObservableCollection<ItemModel>(result.data);
+                   
                 }
                 else
                 {
                     // api is down
-                   App.Current.MainPage.DisplayAlert("Message", "system not working", "ok");
+                   App.Current.MainPage.DisplayAlert("Message", "There are no menu items in this organization", "ok");
                 }
             }
             catch (Exception e)

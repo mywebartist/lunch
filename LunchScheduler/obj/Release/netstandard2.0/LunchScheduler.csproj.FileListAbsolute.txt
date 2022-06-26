@@ -19,11 +19,10 @@ D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Release\netstandard2.0\Page\ChefItemsManagePage.xaml.g.cs
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Release\netstandard2.0\Page\ChefViewOrdersPage.xaml.g.cs
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Release\netstandard2.0\Page\LoginPage.xaml.g.cs
-D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Release\netstandard2.0\Page\OrgAdminPage.xaml.g.cs
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Release\netstandard2.0\Page\OrganizationItemsPage.xaml.g.cs
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Release\netstandard2.0\Page\OrganizationsListPage.xaml.g.cs
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Release\netstandard2.0\Page\PinPage.xaml.g.cs
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Release\netstandard2.0\Page\ProfilePage.xaml.g.cs
-D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Release\netstandard2.0\Page\RoleManagePage.xaml.g.cs
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Release\netstandard2.0\Page\StaffItemsSelectionPage.xaml.g.cs
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Release\netstandard2.0\Page\AddNewOrgPage.xaml.g.cs
+D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Release\netstandard2.0\Page\UsersList.xaml.g.cs

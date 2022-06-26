@@ -15,12 +15,14 @@ namespace LunchScheduler
     public partial class ProfilePage : ContentPage
     {
         Page.MainMenuPage _mainmenupage;
+
+        ProfileViewModel viewModel;
         public ProfilePage(Page.MainMenuPageFlyout flyoutPage, Page.MainMenuPage mainMenuPage)
         {
             
             InitializeComponent();
             
-            BindingContext = new ProfileViewModel();
+            BindingContext  = viewModel = new ProfileViewModel();
 
             _flyoutPage = flyoutPage;
             _mainmenupage = mainMenuPage;
@@ -54,7 +56,6 @@ namespace LunchScheduler
 
             if (result != null)
             {
-
                 _mainmenupage.gotoPage(new MainMenuPageDetail());
             }
             else
@@ -66,5 +67,25 @@ namespace LunchScheduler
 
         }
 
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            var web = new AccountService();
+            var result = await web.updateUserNameProfileApi(viewModel.Name);
+
+            Debug.WriteLine("response: " + result);
+
+            if (result != null)
+            {
+                await DisplayAlert("Message", result.message, "ok");
+                // _mainmenupage.gotoPage(new MainMenuPageDetail());
+            }
+            else
+            {
+                // api is down
+                App.Current.MainPage.DisplayAlert("Message", "backend system not working", "ok");
+            }
+
+
+        }
     }
 }

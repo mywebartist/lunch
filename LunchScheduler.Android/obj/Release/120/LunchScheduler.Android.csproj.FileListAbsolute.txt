@@ -50,8 +50,6 @@ D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Release\120\android\bin\eu.mywebartist.lunchscheduler.apks
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Release\120\res\values\styles.xml
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Release\120\res\values\colors.xml
-D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Release\120\res\mipmap-anydpi-v26\icon.xml
-D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Release\120\res\mipmap-anydpi-v26\icon_round.xml
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Release\120\res\mipmap-hdpi\icon.png
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Release\120\res\mipmap-hdpi\launcher_foreground.png
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Release\120\res\mipmap-mdpi\icon.png

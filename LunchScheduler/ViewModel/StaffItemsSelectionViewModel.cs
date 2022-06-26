@@ -52,7 +52,7 @@ namespace LunchScheduler.ViewModel
                 else
                 {
                     // api is down
-                    App.Current.MainPage.DisplayAlert("Message", "system not working", "ok");
+                    App.Current.MainPage.DisplayAlert("Message", "There are no menu items in this organization", "ok");
                 }
             }
             catch (Exception e)

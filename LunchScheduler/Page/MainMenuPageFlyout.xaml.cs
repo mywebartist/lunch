@@ -45,14 +45,17 @@ namespace LunchScheduler.Page
                     new MainMenuPageFlyoutMenuItem { Id = 2, Title = "Select Lunch Menu" },
                     new MainMenuPageFlyoutMenuItem { Id = 100, Title = "-----" },
                     new MainMenuPageFlyoutMenuItem { Id = 4, Title = "View Orders" },
+                    new MainMenuPageFlyoutMenuItem { Id = 9, Title = "View Users" },
                     new MainMenuPageFlyoutMenuItem { Id = 3, Title = "Add New Menu Item" },
                     new MainMenuPageFlyoutMenuItem { Id = 6, Title = "Edit Menu Item" },
                     new MainMenuPageFlyoutMenuItem { Id = 100, Title = "-----" },
                     new MainMenuPageFlyoutMenuItem { Id = 5, Title = "Organizations List" },
                     new MainMenuPageFlyoutMenuItem { Id = 7, Title = "Add New Organization" },
-                     new MainMenuPageFlyoutMenuItem { Id = 100, Title = "-----" },
+                    new MainMenuPageFlyoutMenuItem { Id = 100, Title = "-----" },
                     new MainMenuPageFlyoutMenuItem { Id = 1, Title = "Profile" },
                     new MainMenuPageFlyoutMenuItem { Id = 8, Title = "Logout" },
+                    new MainMenuPageFlyoutMenuItem { Id = 100, Title = "-----" },
+                    new MainMenuPageFlyoutMenuItem { Id = 100, Title = "mywebartist.eu" },
                 });
             }
 

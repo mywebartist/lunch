@@ -70,10 +70,14 @@ namespace LunchScheduler.Page
                page = new LoginPage();
 
             }
-            else
+            else if (item.Id == 9)
             {
-                page = new MainMenuPageDetail();
-                page.Title = "My Lunch Menu";
+                page = new UsersList();
+
+            }
+            else if(item.Id == 100)
+            {
+                return;
             }
 
             page.Title = item.Title;

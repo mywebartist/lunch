@@ -25,7 +25,7 @@
           <Label
               Grid.Column="1"
               Grid.Row="1"
-              Text="Lunch Scheduler"
+              Text="Lunch Scheduler" TextColor="White"
               Style="{DynamicResource SubtitleStyle}"/>
 
             <Label
@@ -33,7 +33,7 @@
                 x:FieldModifier="public"
               Grid.Row="2"
                 FontSize="Subtitle"
-              x:Name="OrganizationName"
+              x:Name="OrganizationName" TextColor="White"
               Style="{DynamicResource SubtitleStyle}"/>
               
             <Label
@@ -41,7 +41,7 @@
                 x:FieldModifier="public"
               Grid.Row="3"
                 FontSize="Subtitle"
-              x:Name="UserEmail"
+              x:Name="UserEmail" TextColor="White"
               Style="{DynamicResource SubtitleStyle}"/>
             
                 </Grid>

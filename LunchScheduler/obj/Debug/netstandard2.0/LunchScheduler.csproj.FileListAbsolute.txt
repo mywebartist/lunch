@@ -42,6 +42,7 @@ D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Debug\netstandard2.0\Page\PinPage.xaml.g.cs
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Debug\netstandard2.0\Page\ProfilePage.xaml.g.cs
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Debug\netstandard2.0\Page\StaffItemsSelectionPage.xaml.g.cs
+D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Debug\netstandard2.0\Page\UsersList.xaml.g.cs
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Debug\netstandard2.0\View\NavigationBarView.xaml.g.cs
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Debug\netstandard2.0\LunchScheduler.AssemblyInfoInputs.cache
 D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler\obj\Debug\netstandard2.0\LunchScheduler.AssemblyInfo.cs

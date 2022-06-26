@@ -45,7 +45,6 @@ namespace LunchScheduler
                     Settings.APIKey = result.XApikey;
                     Debug.WriteLine("response token: " + result.XApikey);
 
-                    // Settings.OrganizationIds = result.organization_ids;
                     Settings.ActiveOrganizationId = result.user.default_org.ToString();
 
                     if (Settings.ActiveOrganizationId == "0")

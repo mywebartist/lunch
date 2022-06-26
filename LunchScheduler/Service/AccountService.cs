@@ -250,6 +250,38 @@ namespace LunchScheduler.Service
             return null;
         }
 
+        public async Task<UsersListResponseModel> getUsersListApi()
+        {
+
+            try
+            {
+                Uri uri = new Uri(ConfigService.orgUsersUrl + "?organization_id=" + Settings.ActiveOrganizationId);
+
+                var result = await _client.GetAsync(uri);
+
+                if (result != null && result.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+
+                    string responseStr = await result.Content.ReadAsStringAsync();
+                    Debug.WriteLine("response: " + responseStr);
+
+                    var responseObj = await Task.Run(() =>
+                    {
+                        return JsonConvert.DeserializeObject<UsersListResponseModel>(responseStr);
+                    });
+
+                    return responseObj;
+
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("response_error: " + e.Message);
+
+            }
+            return null;
+        }
+
         public async Task<OrganizationItemsListResponseModel> getOrganizationsItemsListApi()
         {
             try
@@ -352,6 +384,83 @@ namespace LunchScheduler.Service
 
         }
 
+
+        public async Task<UserModel> updateUserNameProfileApi(string name)
+        {
+
+            try
+            {
+                Uri uri = new Uri(ConfigService.userProfileUrl);
+
+
+                JObject jObj = new JObject();
+                jObj.Add("name", name);
+
+                StringContent content = new StringContent(jObj.ToString(), Encoding.UTF8, "application/json");
+
+                var result = await _client.PutAsync(uri, content);
+
+                if (result != null && result.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    string responseStr = await result.Content.ReadAsStringAsync();
+                    Debug.WriteLine("response: " + responseStr);
+
+                    var responseObj = await Task.Run(() =>
+                    {
+                        return JsonConvert.DeserializeObject<UserModel>(responseStr);
+                    });
+                    return responseObj;
+
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("response_error: " + e.Message);
+
+            }
+
+            return null;
+
+        }
+
+        public async Task<UserModel> updateMenuItemApi(int id, string name, string description)
+        {
+
+            try
+            {
+                Uri uri = new Uri(ConfigService.itemsUrl + "/" + id);
+
+
+                JObject jObj = new JObject();
+                jObj.Add("name", name);
+                jObj.Add("description", description);
+
+                StringContent content = new StringContent(jObj.ToString(), Encoding.UTF8, "application/json");
+
+                var result = await _client.PutAsync(uri, content);
+
+                if (result != null && result.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    string responseStr = await result.Content.ReadAsStringAsync();
+                    Debug.WriteLine("response: " + responseStr);
+
+                    var responseObj = await Task.Run(() =>
+                    {
+                        return JsonConvert.DeserializeObject<UserModel>(responseStr);
+                    });
+                    return responseObj;
+
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("response_error: " + e.Message);
+
+            }
+
+            return null;
+
+        }
 
         public async Task<UserModel> updateUserProfileApi(int default_org)
         {

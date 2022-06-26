@@ -18,7 +18,9 @@
                                 </Label>
                                 <Label Padding="0,20,0,0" Grid.Column="0"  Text="{Binding description}"  VerticalTextAlignment="Start" FontSize="Small" TextColor="Gray" >
                                 </Label>
-                                <Button Clicked="Button_ClickedAsync" Padding="0,0" Margin="0,20" FontSize="Small"  Grid.Column="1" ClassId="{Binding id}" BackgroundColor="DeepSkyBlue"  Text="Join"></Button>
+                                <Button Clicked="Button_ClickedAsync" Padding="0,0" Margin="0,20" TextColor="White"
+                                        FontSize="Small"  Grid.Column="1" ClassId="{Binding id}" BackgroundColor="DeepSkyBlue"
+                                       IsVisible="{Binding is_joined}" Text="Join"></Button>
 
 
                             </Grid>

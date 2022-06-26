@@ -4,16 +4,24 @@
              x:Class="LunchScheduler.ProfilePage" Title="Profile"   >
 
     <ContentPage.Content>
+        
+        
         <StackLayout Padding="20,20,20,0" Spacing="0" >
             <Label Text="Name:" FontSize="12" TextColor="Gray"   />
-            <Label Text="{Binding Name}" FontSize="16" FontAttributes="Bold"   />
+            <Label Text="{Binding Name}" FontSize="16"   />
 
-
+            <StackLayout Orientation="Horizontal">
+                <Entry Text="{Binding Name}" HorizontalOptions="FillAndExpand"  ></Entry>
+                <Button Clicked="Button_Clicked" TextColor="White" BackgroundColor="DeepSkyBlue"  Text="Update"></Button>
+            </StackLayout>
+          
             <Label Text="Email:" FontSize="12" Margin="0,10,0,0" TextColor="Gray"  />
-            <Label Text="{Binding Email}" FontSize="16" FontAttributes="Bold"  />
+            <Label Text="{Binding Email}" FontSize="16"    />
+
+            
 
             <Label Text="Organizations:" FontSize="12" Margin="0,10,0,0" TextColor="Gray"  />
-            <Label Text="{Binding Organization}" FontSize="16" FontAttributes="Bold"  />
+            <Label Text="{Binding Organization}" FontSize="16"    />
 
 
             <ListView 
@@ -27,7 +35,7 @@
 
                                 <Label Padding="0,0,0,0" Grid.Column="0" Text="{Binding organization_with_id}" VerticalTextAlignment="Center" TextColor="Black" >
                                 </Label>
-                                <Button Clicked="ActivateButton_Clicked" BackgroundColor="{Binding activate_color}"  Grid.Column="1" ClassId="{Binding id}"  Text="{Binding activated_text}"></Button>
+                                <Button Clicked="ActivateButton_Clicked" TextColor="White" BackgroundColor="{Binding activate_color}"  Grid.Column="1" ClassId="{Binding id}"  Text="{Binding activated_text}"></Button>
 
                             </Grid>
                         </ViewCell>

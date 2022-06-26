@@ -53,7 +53,7 @@ namespace LunchScheduler.ViewModel
                     }
                     else
                     {
-                        Message = "There are no orders for his organization";
+                        Message = "There are no orders for this organization";
                         //App.Current.MainPage.DisplayAlert("Message", result.message, "ok");
                     }
 

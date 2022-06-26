@@ -1,6 +1,4 @@
 @string/appbar_scrolling_view_behavior;D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\lp\54\jl\res\layout\rootlayout.xml
-adaptive-icon;obj\Debug\120\res\mipmap-anydpi-v26\icon.xml
-adaptive-icon;obj\Debug\120\res\mipmap-anydpi-v26\icon_round.xml
 alpha;D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\lp\54\jl\res\anim\enterfromleft.xml
 alpha;D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\lp\54\jl\res\anim\exittoleft.xml
 androidx.appcompat.widget.Toolbar;D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\lp\54\jl\res\layout\fallbacktoolbardonotuse.xml
@@ -10,8 +8,6 @@ androidx.appcompat.widget.Toolbar;D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xama
 androidx.coordinatorlayout.widget.CoordinatorLayout;D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\lp\54\jl\res\layout\rootlayout.xml
 androidx.coordinatorlayout.widget.CoordinatorLayout;D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\lp\54\jl\res\layout\shellcontent.xml
 attr;D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\lp\54\jl\res\values\attrs.xml
-background;obj\Debug\120\res\mipmap-anydpi-v26\icon.xml
-background;obj\Debug\120\res\mipmap-anydpi-v26\icon_round.xml
 cache-path;D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\lp\53\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Debug\120\res\values\colors.xml
 com.google.android.material.appbar.AppBarLayout;D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\lp\54\jl\res\layout\flyoutcontent.xml
@@ -24,8 +20,6 @@ com.google.android.material.tabs.TabLayout;D:\USB_Drive\saxsheet\semester3-2\3.2
 declare-styleable;D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\lp\54\jl\res\values\attrs.xml
 external-cache-path;D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\lp\53\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 external-path;D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\lp\53\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-foreground;obj\Debug\120\res\mipmap-anydpi-v26\icon.xml
-foreground;obj\Debug\120\res\mipmap-anydpi-v26\icon_round.xml
 FrameLayout;D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\lp\54\jl\res\layout\bottomtablayout.xml
 item;D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\lp\54\jl\res\values\styles.xml
 LinearLayout;D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\120\lp\54\jl\res\layout\bottomtablayout.xml

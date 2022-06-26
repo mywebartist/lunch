@@ -15,10 +15,11 @@ namespace LunchScheduler.Model
         public string description { get; set; }
         public string website { get; set; }
         public bool joined { get; set; }
+        public bool is_joined => !joined;
         public string roles { get; set; }
         public DateTime created_at { get; set; }
         public DateTime updated_at { get; set; }
-        public string organization_with_id => name + "(id: " + id + ")";
+        public string organization_with_id => name + " (Id: " + id + ")";
         public Color activate_color => id == Convert.ToInt32(Settings.ActiveOrganizationId) ? Color.DeepSkyBlue : Color.LightGray;
         public string activated_text => id == Convert.ToInt32(Settings.ActiveOrganizationId) ? "Active" : "Activate";
 
