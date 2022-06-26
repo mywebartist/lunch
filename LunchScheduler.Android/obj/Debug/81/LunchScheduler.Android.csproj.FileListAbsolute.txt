@@ -1,3 +1,0 @@
-D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\81\MonoAndroid,Version=v8.1.AssemblyAttributes.cs
-D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\81\build.props
-D:\USB_Drive\saxsheet\semester3-2\3.2xapp.xamarin\LunchScheduler\LunchScheduler.Android\obj\Debug\81\adb.props
